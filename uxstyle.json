@@ -1,0 +1,958 @@
+{
+  "app": "Jarman App",
+  "version": "0.1.0",
+  "description": "High-level UI/UX flowchart for Jarman App (mobile web app for learning German A1–C1).",
+  "flows": [
+    {
+      "id": "onboarding",
+      "title": "Onboarding & First-Time Setup",
+      "start": "onboarding_welcome",
+      "screens": [
+        {
+          "id": "onboarding_welcome",
+          "title": "Welcome",
+          "type": "screen",
+          "category": "onboarding",
+          "description": "Intro screen explaining what Jarman App is and what the user can achieve.",
+          "actions": [
+            {
+              "id": "btn_get_started",
+              "label": "Get Started",
+              "target": "onboarding_choose_language"
+            }
+          ]
+        },
+        {
+          "id": "onboarding_choose_language",
+          "title": "Choose Interface Language",
+          "type": "screen",
+          "category": "onboarding",
+          "description": "User selects interface language: Farsi or English.",
+          "actions": [
+            {
+              "id": "select_farsi",
+              "label": "Farsi (فارسی)",
+              "target": "onboarding_choose_level"
+            },
+            {
+              "id": "select_english",
+              "label": "English",
+              "target": "onboarding_choose_level"
+            }
+          ]
+        },
+        {
+          "id": "onboarding_choose_level",
+          "title": "Select German Level",
+          "type": "screen",
+          "category": "onboarding",
+          "description": "User selects current approximate German level (A1, A2, B1, B2, C1, or 'I am a complete beginner').",
+          "actions": [
+            {
+              "id": "select_complete_beginner",
+              "label": "Complete Beginner",
+              "target": "onboarding_set_daily_goal"
+            },
+            {
+              "id": "select_a1",
+              "label": "A1",
+              "target": "onboarding_set_daily_goal"
+            },
+            {
+              "id": "select_a2",
+              "label": "A2",
+              "target": "onboarding_set_daily_goal"
+            },
+            {
+              "id": "select_b1",
+              "label": "B1",
+              "target": "onboarding_set_daily_goal"
+            },
+            {
+              "id": "select_b2",
+              "label": "B2",
+              "target": "onboarding_set_daily_goal"
+            },
+            {
+              "id": "select_c1",
+              "label": "C1",
+              "target": "onboarding_set_daily_goal"
+            }
+          ]
+        },
+        {
+          "id": "onboarding_set_daily_goal",
+          "title": "Set Daily Goal",
+          "type": "screen",
+          "category": "onboarding",
+          "description": "User selects how many minutes per day they want to learn.",
+          "actions": [
+            {
+              "id": "goal_5_min",
+              "label": "5 min / day",
+              "target": "onboarding_summary"
+            },
+            {
+              "id": "goal_10_min",
+              "label": "10 min / day",
+              "target": "onboarding_summary"
+            },
+            {
+              "id": "goal_15_min",
+              "label": "15 min / day",
+              "target": "onboarding_summary"
+            },
+            {
+              "id": "goal_custom",
+              "label": "Custom",
+              "target": "onboarding_summary"
+            }
+          ]
+        },
+        {
+          "id": "onboarding_summary",
+          "title": "Onboarding Summary",
+          "type": "screen",
+          "category": "onboarding",
+          "description": "Shows selected language, level, and daily goal. Encourages user to start first lesson.",
+          "actions": [
+            {
+              "id": "btn_start_first_lesson",
+              "label": "Start First Lesson",
+              "target": "lesson_first_time_intro"
+            }
+          ]
+        },
+        {
+          "id": "lesson_first_time_intro",
+          "title": "First Lesson Intro",
+          "type": "screen",
+          "category": "lesson",
+          "description": "Short introductory lesson (e.g., greetings or basic words) to immediately start learning.",
+          "actions": [
+            {
+              "id": "btn_start_lesson",
+              "label": "Start",
+              "target": "lesson_vocabulary_step_1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "main_navigation",
+      "title": "Main App Navigation",
+      "start": "home_dashboard",
+      "screens": [
+        {
+          "id": "home_dashboard",
+          "title": "Home",
+          "type": "screen",
+          "category": "home",
+          "description": "Overview of user progress, streak, daily goal, and quick access to current lesson.",
+          "bottomNav": true,
+          "actions": [
+            {
+              "id": "continue_lesson",
+              "label": "Continue Lesson",
+              "target": "lesson_overview"
+            },
+            {
+              "id": "go_to_learn_tab",
+              "label": "Learn",
+              "target": "learn_levels_overview"
+            },
+            {
+              "id": "go_to_vocab_tab",
+              "label": "Vocabulary",
+              "target": "vocab_home"
+            },
+            {
+              "id": "go_to_dialogues_tab",
+              "label": "Dialogues",
+              "target": "dialogues_list"
+            },
+            {
+              "id": "go_to_profile_tab",
+              "label": "Profile",
+              "target": "profile_overview"
+            }
+          ]
+        },
+        {
+          "id": "learn_levels_overview",
+          "title": "Learn – Levels",
+          "type": "screen",
+          "category": "learn",
+          "description": "Shows CEFR levels (A1–C1) and user progress per level.",
+          "bottomNav": true,
+          "actions": [
+            {
+              "id": "open_level_a1",
+              "label": "Open A1",
+              "target": "learn_units_a1"
+            },
+            {
+              "id": "open_level_a2",
+              "label": "Open A2",
+              "target": "learn_units_a2"
+            },
+            {
+              "id": "open_level_b1",
+              "label": "Open B1",
+              "target": "learn_units_b1"
+            },
+            {
+              "id": "open_level_b2",
+              "label": "Open B2",
+              "target": "learn_units_b2"
+            },
+            {
+              "id": "open_level_c1",
+              "label": "Open C1",
+              "target": "learn_units_c1"
+            },
+            {
+              "id": "go_home",
+              "label": "Home",
+              "target": "home_dashboard"
+            }
+          ]
+        },
+        {
+          "id": "learn_units_a1",
+          "title": "A1 Units",
+          "type": "screen",
+          "category": "learn",
+          "description": "List of units for A1 (e.g., Basics, Family, Food, etc.).",
+          "actions": [
+            {
+              "id": "open_a1_unit_1",
+              "label": "Unit 1: Basics",
+              "target": "lesson_overview"
+            },
+            {
+              "id": "open_a1_unit_2",
+              "label": "Unit 2: Introductions",
+              "target": "lesson_overview"
+            },
+            {
+              "id": "back_to_levels",
+              "label": "Back to Levels",
+              "target": "learn_levels_overview"
+            }
+          ]
+        },
+        {
+          "id": "learn_units_a2",
+          "title": "A2 Units",
+          "type": "screen",
+          "category": "learn",
+          "description": "List of units for A2.",
+          "actions": [
+            {
+              "id": "back_to_levels_from_a2",
+              "label": "Back to Levels",
+              "target": "learn_levels_overview"
+            }
+          ]
+        },
+        {
+          "id": "learn_units_b1",
+          "title": "B1 Units",
+          "type": "screen",
+          "category": "learn",
+          "description": "List of units for B1.",
+          "actions": [
+            {
+              "id": "back_to_levels_from_b1",
+              "label": "Back to Levels",
+              "target": "learn_levels_overview"
+            }
+          ]
+        },
+        {
+          "id": "learn_units_b2",
+          "title": "B2 Units",
+          "type": "screen",
+          "category": "learn",
+          "description": "List of units for B2.",
+          "actions": [
+            {
+              "id": "back_to_levels_from_b2",
+              "label": "Back to Levels",
+              "target": "learn_levels_overview"
+            }
+          ]
+        },
+        {
+          "id": "learn_units_c1",
+          "title": "C1 Units",
+          "type": "screen",
+          "category": "learn",
+          "description": "List of units for C1.",
+          "actions": [
+            {
+              "id": "back_to_levels_from_c1",
+              "label": "Back to Levels",
+              "target": "learn_levels_overview"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesson_flow",
+      "title": "Lesson Flow (Vocabulary + Grammar + Dialogue)",
+      "start": "lesson_overview",
+      "screens": [
+        {
+          "id": "lesson_overview",
+          "title": "Lesson Overview",
+          "type": "screen",
+          "category": "lesson",
+          "description": "Shows lesson structure: vocabulary, grammar, dialogue, estimated time.",
+          "actions": [
+            {
+              "id": "start_vocabulary_part",
+              "label": "Start Vocabulary",
+              "target": "lesson_vocabulary_step_1"
+            },
+            {
+              "id": "start_grammar_part",
+              "label": "Start Grammar",
+              "target": "lesson_grammar_step_1"
+            },
+            {
+              "id": "start_dialogue_part",
+              "label": "Start Dialogue",
+              "target": "lesson_dialogue_intro"
+            },
+            {
+              "id": "back_to_units",
+              "label": "Back to Units",
+              "target": "learn_units_a1"
+            }
+          ]
+        },
+        {
+          "id": "lesson_vocabulary_step_1",
+          "title": "Lesson Vocabulary – Step 1",
+          "type": "screen",
+          "category": "lesson_vocabulary",
+          "description": "First vocabulary flashcard in this lesson.",
+          "actions": [
+            {
+              "id": "next_vocab_step",
+              "label": "Next",
+              "target": "lesson_vocabulary_step_2"
+            },
+            {
+              "id": "exit_to_overview_from_vocab_1",
+              "label": "Exit Lesson",
+              "target": "lesson_overview"
+            }
+          ]
+        },
+        {
+          "id": "lesson_vocabulary_step_2",
+          "title": "Lesson Vocabulary – Step 2",
+          "type": "screen",
+          "category": "lesson_vocabulary",
+          "description": "Second vocabulary flashcard in this lesson.",
+          "actions": [
+            {
+              "id": "next_vocab_step_to_quiz",
+              "label": "Next",
+              "target": "lesson_vocabulary_quiz"
+            },
+            {
+              "id": "exit_to_overview_from_vocab_2",
+              "label": "Exit Lesson",
+              "target": "lesson_overview"
+            }
+          ]
+        },
+        {
+          "id": "lesson_vocabulary_quiz",
+          "title": "Lesson Vocabulary Quiz",
+          "type": "screen",
+          "category": "lesson_vocabulary",
+          "description": "Multiple-choice or drag-and-drop quiz using the new words.",
+          "actions": [
+            {
+              "id": "submit_vocab_quiz",
+              "label": "Submit",
+              "target": "lesson_grammar_step_1"
+            },
+            {
+              "id": "retry_vocab_quiz",
+              "label": "Retry",
+              "target": "lesson_vocabulary_quiz"
+            }
+          ]
+        },
+        {
+          "id": "lesson_grammar_step_1",
+          "title": "Lesson Grammar – Step 1",
+          "type": "screen",
+          "category": "lesson_grammar",
+          "description": "Short grammar explanation with minimal text and examples.",
+          "actions": [
+            {
+              "id": "next_grammar_step",
+              "label": "Next",
+              "target": "lesson_grammar_quiz"
+            },
+            {
+              "id": "exit_to_overview_from_grammar",
+              "label": "Exit Lesson",
+              "target": "lesson_overview"
+            }
+          ]
+        },
+        {
+          "id": "lesson_grammar_quiz",
+          "title": "Lesson Grammar Quiz",
+          "type": "screen",
+          "category": "lesson_grammar",
+          "description": "Small interactive tasks to practice the grammar rule.",
+          "actions": [
+            {
+              "id": "submit_grammar_quiz",
+              "label": "Submit",
+              "target": "lesson_dialogue_intro"
+            },
+            {
+              "id": "retry_grammar_quiz",
+              "label": "Retry",
+              "target": "lesson_grammar_quiz"
+            }
+          ]
+        },
+        {
+          "id": "lesson_dialogue_intro",
+          "title": "Dialogue Intro",
+          "type": "screen",
+          "category": "lesson_dialogue",
+          "description": "Explains the real-life situation for the dialogue (e.g., at the supermarket).",
+          "actions": [
+            {
+              "id": "start_dialogue_playback",
+              "label": "Start Dialogue",
+              "target": "lesson_dialogue_step_1"
+            },
+            {
+              "id": "skip_dialogue",
+              "label": "Skip Dialogue",
+              "target": "lesson_result"
+            }
+          ]
+        },
+        {
+          "id": "lesson_dialogue_step_1",
+          "title": "Dialogue – Step 1",
+          "type": "screen",
+          "category": "lesson_dialogue",
+          "description": "First part of the dialogue playback (audio + text).",
+          "actions": [
+            {
+              "id": "next_dialogue_step_2",
+              "label": "Next",
+              "target": "lesson_dialogue_step_2"
+            },
+            {
+              "id": "repeat_audio_step_1",
+              "label": "Repeat Audio",
+              "target": "lesson_dialogue_step_1"
+            }
+          ]
+        },
+        {
+          "id": "lesson_dialogue_step_2",
+          "title": "Dialogue – Step 2",
+          "type": "screen",
+          "category": "lesson_dialogue",
+          "description": "Second part of the dialogue playback, including optional user answer choice.",
+          "actions": [
+            {
+              "id": "next_dialogue_quiz",
+              "label": "Continue",
+              "target": "lesson_dialogue_quiz"
+            },
+            {
+              "id": "repeat_audio_step_2",
+              "label": "Repeat Audio",
+              "target": "lesson_dialogue_step_2"
+            }
+          ]
+        },
+        {
+          "id": "lesson_dialogue_quiz",
+          "title": "Dialogue Quiz",
+          "type": "screen",
+          "category": "lesson_dialogue",
+          "description": "User answers comprehension questions about the dialogue.",
+          "actions": [
+            {
+              "id": "submit_dialogue_quiz",
+              "label": "Submit",
+              "target": "lesson_result"
+            },
+            {
+              "id": "retry_dialogue_quiz",
+              "label": "Retry",
+              "target": "lesson_dialogue_quiz"
+            }
+          ]
+        },
+        {
+          "id": "lesson_result",
+          "title": "Lesson Result",
+          "type": "screen",
+          "category": "lesson",
+          "description": "Shows XP gained, mistakes, and recommended review items.",
+          "actions": [
+            {
+              "id": "go_to_next_lesson",
+              "label": "Next Lesson",
+              "target": "lesson_overview"
+            },
+            {
+              "id": "go_to_home_from_result",
+              "label": "Back to Home",
+              "target": "home_dashboard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vocabulary_flow",
+      "title": "Vocabulary Flow",
+      "start": "vocab_home",
+      "screens": [
+        {
+          "id": "vocab_home",
+          "title": "Vocabulary Home",
+          "type": "screen",
+          "category": "vocabulary",
+          "description": "Entry point for vocabulary learning: review, new words, categories.",
+          "bottomNav": true,
+          "actions": [
+            {
+              "id": "start_review_session",
+              "label": "Review Words",
+              "target": "vocab_review_session"
+            },
+            {
+              "id": "browse_vocab_categories",
+              "label": "Browse Categories",
+              "target": "vocab_category_list"
+            },
+            {
+              "id": "go_home_from_vocab",
+              "label": "Home",
+              "target": "home_dashboard"
+            }
+          ]
+        },
+        {
+          "id": "vocab_review_session",
+          "title": "Vocabulary Review Session",
+          "type": "screen",
+          "category": "vocabulary",
+          "description": "Flashcard review using spaced repetition.",
+          "actions": [
+            {
+              "id": "show_word_detail",
+              "label": "Show Word Detail",
+              "target": "vocab_word_detail"
+            },
+            {
+              "id": "end_review_session",
+              "label": "End Session",
+              "target": "vocab_home"
+            }
+          ]
+        },
+        {
+          "id": "vocab_word_detail",
+          "title": "Word Detail",
+          "type": "screen",
+          "category": "vocabulary",
+          "description": "Shows word, translation, audio, example sentence, and mark-as-known option.",
+          "actions": [
+            {
+              "id": "mark_word_known",
+              "label": "Mark as Known",
+              "target": "vocab_review_session"
+            },
+            {
+              "id": "back_to_review",
+              "label": "Back",
+              "target": "vocab_review_session"
+            }
+          ]
+        },
+        {
+          "id": "vocab_category_list",
+          "title": "Vocabulary Categories",
+          "type": "screen",
+          "category": "vocabulary",
+          "description": "List of vocabulary categories (Food, Family, Travel, etc.).",
+          "actions": [
+            {
+              "id": "open_vocab_category_food",
+              "label": "Food",
+              "target": "vocab_category_detail"
+            },
+            {
+              "id": "open_vocab_category_family",
+              "label": "Family",
+              "target": "vocab_category_detail"
+            },
+            {
+              "id": "back_to_vocab_home_from_categories",
+              "label": "Back",
+              "target": "vocab_home"
+            }
+          ]
+        },
+        {
+          "id": "vocab_category_detail",
+          "title": "Vocabulary Category Detail",
+          "type": "screen",
+          "category": "vocabulary",
+          "description": "Shows words inside a specific category and lets user start a session.",
+          "actions": [
+            {
+              "id": "start_category_session",
+              "label": "Start Session",
+              "target": "vocab_review_session"
+            },
+            {
+              "id": "back_to_category_list",
+              "label": "Back",
+              "target": "vocab_category_list"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grammar_flow",
+      "title": "Grammar Flow",
+      "start": "grammar_list",
+      "screens": [
+        {
+          "id": "grammar_list",
+          "title": "Grammar Topics",
+          "type": "screen",
+          "category": "grammar",
+          "description": "List of grammar topics (articles, verb conjugation, cases, etc.).",
+          "actions": [
+            {
+              "id": "open_grammar_topic_articles",
+              "label": "Articles (der, die, das)",
+              "target": "grammar_lesson"
+            },
+            {
+              "id": "open_grammar_topic_verbs",
+              "label": "Present Tense Verbs",
+              "target": "grammar_lesson"
+            },
+            {
+              "id": "go_home_from_grammar",
+              "label": "Home",
+              "target": "home_dashboard"
+            }
+          ]
+        },
+        {
+          "id": "grammar_lesson",
+          "title": "Grammar Lesson",
+          "type": "screen",
+          "category": "grammar",
+          "description": "Short explanation with examples and optional audio.",
+          "actions": [
+            {
+              "id": "start_grammar_quiz_from_lesson",
+              "label": "Practice",
+              "target": "grammar_quiz"
+            },
+            {
+              "id": "back_to_grammar_list",
+              "label": "Back",
+              "target": "grammar_list"
+            }
+          ]
+        },
+        {
+          "id": "grammar_quiz",
+          "title": "Grammar Quiz",
+          "type": "screen",
+          "category": "grammar",
+          "description": "Quick exercises to test understanding of a grammar topic.",
+          "actions": [
+            {
+              "id": "submit_grammar_quiz_from_main",
+              "label": "Submit",
+              "target": "grammar_result"
+            },
+            {
+              "id": "retry_grammar_quiz_from_main",
+              "label": "Retry",
+              "target": "grammar_quiz"
+            }
+          ]
+        },
+        {
+          "id": "grammar_result",
+          "title": "Grammar Result",
+          "type": "screen",
+          "category": "grammar",
+          "description": "Shows performance on grammar quiz and suggests review.",
+          "actions": [
+            {
+              "id": "back_to_grammar_list_from_result",
+              "label": "Back to Topics",
+              "target": "grammar_list"
+            },
+            {
+              "id": "go_home_from_grammar_result",
+              "label": "Home",
+              "target": "home_dashboard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dialogues_flow",
+      "title": "Dialogues Flow",
+      "start": "dialogues_list",
+      "screens": [
+        {
+          "id": "dialogues_list",
+          "title": "Dialogue Situations",
+          "type": "screen",
+          "category": "dialogues",
+          "description": "List of real-life situations (Supermarket, Doctor, Café, Jobcenter, etc.).",
+          "bottomNav": true,
+          "actions": [
+            {
+              "id": "open_dialogue_supermarket",
+              "label": "At the Supermarket",
+              "target": "dialogue_player"
+            },
+            {
+              "id": "open_dialogue_doctor",
+              "label": "At the Doctor",
+              "target": "dialogue_player"
+            },
+            {
+              "id": "go_home_from_dialogues",
+              "label": "Home",
+              "target": "home_dashboard"
+            }
+          ]
+        },
+        {
+          "id": "dialogue_player",
+          "title": "Dialogue Player",
+          "type": "screen",
+          "category": "dialogues",
+          "description": "Plays the selected dialogue with text, translation toggle, and repeat options.",
+          "actions": [
+            {
+              "id": "start_dialogue_quiz_from_player",
+              "label": "Quiz",
+              "target": "dialogue_quiz"
+            },
+            {
+              "id": "repeat_dialogue_audio",
+              "label": "Repeat Audio",
+              "target": "dialogue_player"
+            },
+            {
+              "id": "back_to_dialogues_list_from_player",
+              "label": "Back",
+              "target": "dialogues_list"
+            }
+          ]
+        },
+        {
+          "id": "dialogue_quiz",
+          "title": "Dialogue Quiz",
+          "type": "screen",
+          "category": "dialogues",
+          "description": "Comprehension questions based on the dialogue.",
+          "actions": [
+            {
+              "id": "submit_dialogue_quiz_from_main",
+              "label": "Submit",
+              "target": "dialogue_result"
+            },
+            {
+              "id": "retry_dialogue_quiz_from_main",
+              "label": "Retry",
+              "target": "dialogue_quiz"
+            }
+          ]
+        },
+        {
+          "id": "dialogue_result",
+          "title": "Dialogue Result",
+          "type": "screen",
+          "category": "dialogues",
+          "description": "Shows how well the user understood the dialogue.",
+          "actions": [
+            {
+              "id": "back_to_dialogues_list_from_result",
+              "label": "Back to Dialogues",
+              "target": "dialogues_list"
+            },
+            {
+              "id": "go_home_from_dialogues_result",
+              "label": "Home",
+              "target": "home_dashboard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "profile_flow",
+      "title": "Profile & Settings Flow",
+      "start": "profile_overview",
+      "screens": [
+        {
+          "id": "profile_overview",
+          "title": "Profile Overview",
+          "type": "screen",
+          "category": "profile",
+          "description": "Shows user avatar, XP, streak, level progress, and quick access to settings.",
+          "bottomNav": true,
+          "actions": [
+            {
+              "id": "open_progress_detail",
+              "label": "Progress Detail",
+              "target": "profile_progress_detail"
+            },
+            {
+              "id": "open_settings",
+              "label": "Settings",
+              "target": "settings_home"
+            },
+            {
+              "id": "go_home_from_profile",
+              "label": "Home",
+              "target": "home_dashboard"
+            }
+          ]
+        },
+        {
+          "id": "profile_progress_detail",
+          "title": "Progress Detail",
+          "type": "screen",
+          "category": "profile",
+          "description": "Detailed charts and statistics about learning time, XP, and words learned.",
+          "actions": [
+            {
+              "id": "back_to_profile_from_progress",
+              "label": "Back",
+              "target": "profile_overview"
+            }
+          ]
+        },
+        {
+          "id": "settings_home",
+          "title": "Settings",
+          "type": "screen",
+          "category": "settings",
+          "description": "Main settings screen (language, notifications, daily goal, etc.).",
+          "actions": [
+            {
+              "id": "open_language_settings",
+              "label": "Language Settings",
+              "target": "settings_language"
+            },
+            {
+              "id": "open_notifications_settings",
+              "label": "Notifications",
+              "target": "settings_notifications"
+            },
+            {
+              "id": "open_daily_goal_settings",
+              "label": "Daily Goal",
+              "target": "settings_daily_goal"
+            },
+            {
+              "id": "back_to_profile_from_settings",
+              "label": "Back",
+              "target": "profile_overview"
+            }
+          ]
+        },
+        {
+          "id": "settings_language",
+          "title": "Language Settings",
+          "type": "screen",
+          "category": "settings",
+          "description": "User can change interface language between Farsi and English.",
+          "actions": [
+            {
+              "id": "set_language_farsi",
+              "label": "Farsi (فارسی)",
+              "target": "settings_home"
+            },
+            {
+              "id": "set_language_english",
+              "label": "English",
+              "target": "settings_home"
+            }
+          ]
+        },
+        {
+          "id": "settings_notifications",
+          "title": "Notification Settings",
+          "type": "screen",
+          "category": "settings",
+          "description": "User can enable/disable reminders for daily learning.",
+          "actions": [
+            {
+              "id": "toggle_notifications_on_off",
+              "label": "Toggle Notifications",
+              "target": "settings_notifications"
+            },
+            {
+              "id": "back_to_settings_from_notifications",
+              "label": "Back",
+              "target": "settings_home"
+            }
+          ]
+        },
+        {
+          "id": "settings_daily_goal",
+          "title": "Daily Goal Settings",
+          "type": "screen",
+          "category": "settings",
+          "description": "User can adjust the daily learning time goal.",
+          "actions": [
+            {
+              "id": "update_daily_goal",
+              "label": "Save Goal",
+              "target": "settings_home"
+            },
+            {
+              "id": "back_to_settings_from_daily_goal",
+              "label": "Back",
+              "target": "settings_home"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

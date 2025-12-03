@@ -1,0 +1,16 @@
+[
+  {
+    "id": "g1",
+    "level": "A1",
+    "title": "Personalpronomen",
+    "explanation": "ضمیرهای شخصی در آلمانی...",
+    "examples": [{ "de": "Ich bin Khaled.", "fa": "من خالد هستم." }],
+    "tasks": [
+      {
+        "type": "fill_blank",
+        "question": "___ bin Khaled.",
+        "answer": "Ich"
+      }
+    ]
+  }
+]

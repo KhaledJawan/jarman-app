@@ -1,0 +1,407 @@
+
+    Below is a **full, clean, professional UI/UX Design Document** for *Jarman App*, written exactly like a senior product designer preparing a specification for a new mobile web app.
+
+---
+
+# **📘 Jarman App — UI/UX Design Specification (Full Document)**
+
+### **Language Learning Web-App (A1–C1) for Farsi & English Speakers**
+
+### **Prepared by: Senior UI/UX Designer & German Language Expert**
+
+---
+
+## **1. Product Overview**
+
+**Jarman App** is a mobile-first web application designed to help Farsi- and English-speaking learners master the German language from **A1 to C1**.
+The app focuses on **three core pillars of language learning**:
+
+1. **Vocabulary Memorisation**
+2. **Grammar Mastery**
+3. **Real-Life Dialogue & Speaking**
+
+The goal is to combine the simplicity of **Duolingo**, the clarity of **Grammatik B1**, and a minimalistic modern design—while making the app usable even for users who **cannot read or write well in their native language**.
+
+Jarman App focuses on **simplicity, clarity, accessibility, and motivation**, giving learners a lightweight, enjoyable, and culturally adapted experience.
+
+---
+
+## **2. Target Users**
+
+### **Primary Users:**
+
+* Farsi-speaking immigrants & refugees learning German
+* English-speaking beginners learning German
+* Users with *limited reading & writing skills*
+* Teenagers and adults
+* Users aged 14–60
+
+### **User Challenges**
+
+* Difficulty understanding long texts or explanations
+* Low motivation in traditional learning
+* Difficulty memorizing vocabulary
+* Fear of speaking German
+* Need for a simple, friendly UI
+
+### **User Goals**
+
+* Learn practical German quickly
+* Build confidence in real communication
+* Learn from structured levels (A1 → C1)
+* Study through a minimal and modern interface
+* Use the app on mobile (in low internet conditions)
+
+---
+
+## **3. Design Principles**
+
+### **3.1 Minimalistic Design**
+
+* Clean lines, white space, flat layout
+* Simple color palette (Primary + Accent + Neutral)
+* Only one main action per screen
+* Reduce cognitive load
+
+### **3.2 Accessibility First**
+
+* Large buttons
+* Icon-based navigation
+* Audio for all content
+* Low text dependency
+* Suitable for users with low literacy
+
+### **3.3 Mobile-First Experience**
+
+* Designed for mobile web
+* Fast loading and optimized for low bandwidth
+* Thumb-friendly navigation (bottom bar)
+
+### **3.4 Motivation & Gamification**
+
+* XP points
+* Streaks
+* Badges
+* Progress tracking
+* Simple and fun animations
+
+---
+
+## **4. Information Architecture (IA)**
+
+### **4.1 Main Sections**
+
+1. **Home** – Daily goal, quick resume lesson, XP progress
+2. **Learn** – A1 → C1 modules, lessons, tasks
+3. **Vocabulary** – Flashcards + Spaced Repetition
+4. **Grammar** – Mini explanations + structured examples + exercises
+5. **Dialogues** – Audio-based interactive scenarios
+6. **Profile** – Progress, streaks, statistics, settings
+
+### **4.2 Navigation Structure**
+
+* Bottom Navigation Bar:
+
+  * **Home**
+  * **Learn**
+  * **Vocabulary**
+  * **Dialogues**
+  * **Profile**
+
+---
+
+## **5. User Flow**
+
+### **5.1 Onboarding Flow**
+
+1. Welcome Screen →
+2. Choose Language (Farsi / English) →
+3. Choose Level (Complete Beginner recommended) →
+4. Set Daily Goal (5 min / 10 min / 15 min) →
+5. Start First Lesson (Vocabulary or Dialogue)
+
+### **5.2 Learning Flow**
+
+* Enter A1 →
+* Select "Lesson 1: Basics" →
+* Learn 3 new words →
+* Practice grammar (short task) →
+* Listen to one mini-dialogue →
+* Complete → Earn XP → Move to next lesson
+
+### **5.3 Vocabulary Flow**
+
+* Open Vocabulary →
+* Flashcards →
+* Tap for Audio →
+* Swipe Left/Right →
+* SRS (Spaced Repetition System) automatically schedules review
+
+### **5.4 Grammar Flow**
+
+* Choose Topic →
+* Short explanation (max 4 lines) →
+* Visual table / color-coded examples →
+* 3–5 quick tasks →
+* Immediate feedback
+
+### **5.5 Dialogue Flow**
+
+* Choose Situation (Supermarket, Arzt, Café, Jobcenter, etc.)
+* Listen → Repeat → Answer choice → Scenario continues
+* Optional: Record voice + compare waveform (simple version)
+
+---
+
+## **6. Core Features**
+
+### **6.1 Vocabulary Learning**
+
+* Flashcards with:
+
+  * Image / Icon
+  * German Word
+  * Translation (FA/EN)
+  * Example sentence
+  * Audio
+* SRS Algorithm
+* Daily word challenge
+* Category-based vocabulary
+* Offline caching for studied words
+
+### **6.2 Grammar Lessons**
+
+* Mini sections
+* Visual grammar tables
+* Step-by-step examples
+* Audio explanation option
+* Interactive exercises
+* Adaptive difficulty
+
+### **6.3 Dialogues & Speaking**
+
+* Real-life conversations
+* Voice-based interactions (optional)
+* Split-step dialogues (sentence by sentence)
+* Cultural correctness
+* Slow-speed mode for beginners
+* Each dialogue ends with quiz questions
+
+### **6.4 Progress & Motivational System**
+
+* XP points
+* Badges for milestones (A1 completed, 7-day streak, etc.)
+* Weekly progress summary
+* Personal performance analytics
+* Daily reminder system
+
+### **6.5 Language Customization**
+
+* Fully bilingual (Farsi + English)
+* Toggle between FA/EN anytime
+* Audio for all key content
+* Friendly tone, multicultural design
+
+---
+
+## **7. Visual Design System**
+
+### **7.1 Color Palette (Example)**
+
+* **Primary**: #1E88E5 (Blue — trust, education)
+* **Accent**: #FFB300 (Yellow — energy, motivation)
+* **Success**: #43A047 (Green — positive)
+* **Error**: #E53935 (Red — warnings)
+* **Neutral Light**: #F5F5F5
+* **Neutral Dark**: #212121
+
+### **7.2 Typography**
+
+* **Headings**: Poppins / Inter / SF Pro
+* **Body**: Inter / Roboto
+* **Farsi font**:
+
+  * **Vazirmatn** or **Shabnam** (Readable on web)
+
+### **7.3 Iconography**
+
+* Rounded, simple, modern icons
+* Consistent line weight
+* Large tap targets
+
+### **7.4 Components**
+
+* Buttons (Primary / Secondary / Ghost)
+* Flashcards
+* Progress bars
+* Input fields
+* Audio controls
+* Badge & XP icon sets
+* Bottom navigation bar
+
+---
+
+## **8. Screen Designs (High-Level)**
+
+### **8.1 Home Screen**
+
+* Daily XP goal
+* Continue Lesson button
+* Quick stats
+* “Word of the Day”
+* Streak counter
+
+### **8.2 Lesson Screen**
+
+* Title + Level
+* 3–7 mini tasks
+* Clear progress indicator
+* Audio button always visible
+* Big “Continue” button
+
+### **8.3 Vocabulary Screen**
+
+* Flashcard stack
+* Swipe left/right
+* See translation on tap
+* Audio button
+* Mark as “Learned”
+
+### **8.4 Grammar Screen**
+
+* Visual explanation
+* Minimal text
+* 1–2 examples per rule
+* Quick practice at the bottom
+
+### **8.5 Dialogue Screen**
+
+* Play controls
+* Character avatars
+* Text (German + FA/EN toggle)
+* “Repeat after me” button
+* Answer choice
+* Progress through scenario
+
+### **8.6 Profile Screen**
+
+* Avatar
+* XP summary
+* Badges
+* Learning time
+* Level progression
+* Settings (Language, Sound, Notifications)
+
+---
+
+## **9. Technical Considerations (UX-Oriented)**
+
+* Runs on mobile web (PWA-ready)
+* Fast loading (< 1.5 seconds ideal)
+* Offline cache for recently viewed lessons
+* All content modular for future expansion
+* Audio compression optimized
+* Minimal API calls (batch loading)
+
+---
+
+## **10. Accessibility Guidelines**
+
+* WCAG AA compliance
+* High color contrast
+* Large tappable areas
+* Icon + text labels
+* Ability to enlarge text by 125% and 150%
+* Screenreader support
+* Audio for instructions
+* Low-text mode for low-literacy users
+
+---
+
+## **11. Gamification Elements**
+
+* XP points for each lesson
+* Streak calendar
+* Unlockable achievements
+* Encouraging micro-animations
+* End-of-lesson feedback
+* Motivational phrases (“Great job!”, “Weiter so!”, …)
+
+---
+
+## **12. Roadmap (MVP → Full Product)**
+
+### **MVP Version**
+
+* A1 Level with:
+
+  * 50 vocabulary flashcards
+  * 5 grammar modules
+  * 5 dialogues
+  * Audio in all lessons
+  * XP & streak system
+  * Farsi & English UI
+  * Basic progress tracking
+
+### **Version 1.0**
+
+* Add A2
+* Add tests
+* Add voice recording
+* Add badges
+* Add profile statistics
+
+### **Version 2.0**
+
+* Full A1–C1 curriculum
+* AI-powered personalized learning
+* AI-based pronunciation evaluation
+* Community features
+* Offline mode
+
+---
+
+## **13. Brand Identity**
+
+### **Name:** Jarman App
+
+Meaning: A friendly blend of "German" + “Jārmān (آلمان)” in Farsi.
+Represents cultural connection + simplicity.
+
+### **Tone of Voice**
+
+* Friendly
+* Encouraging
+* Clear
+* Teacher-like but not formal
+* Simple language for beginners
+
+---
+
+## **14. Key Differentiators**
+
+Jarman App stands out because:
+
+* Designed **specifically for Farsi learners**
+* Simple enough for low-literacy users
+* Audio-first and image-based lessons
+* Modern minimalistic UI
+* Real German teacher methodology
+* Web-based (no installation required)
+* Suitable for immigrants learning German for daily life
+
+---
+
+## **15. Conclusion**
+
+Jarman App is a modern, caring, and minimalist language-learning platform designed to make learning German enjoyable and accessible to everyone — especially Farsi-speaking beginners.
+
+With strong UX foundations, bilingual support, audio-driven lessons, and structured content from A1 to C1, Jarman App offers a user-centered experience that feels familiar, friendly, and highly motivating.
+
+
+## **16. icons**
+
+you can use icons from https://lucide.dev/
+it is free and open source. 
+you can install it with : npm install lucide-react 
+---

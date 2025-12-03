@@ -1,0 +1,14 @@
+{
+  "A1": {
+    "name": "A1 – Anfänger",
+    "lessons": [
+      {
+        "id": "l1",
+        "title": "Basics",
+        "words": 10,
+        "grammar": 1,
+        "dialogues": 1
+      }
+    ]
+  }
+}
