@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/lib/i18n";
-import { AppFrame } from "@/components/AppFrame";
+import AppFrameClient from "@/components/AppFrameClient";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   description: "German learning companion for Farsi and English speakers.",
   applicationName: "Jarman App",
   manifest: "/manifest.webmanifest",
+};
+
+export const viewport: Viewport = {
   themeColor: "#1e88e5",
 };
 
@@ -31,7 +34,7 @@ export default function RootLayout({
     <html lang="fa">
       <body className={`${geistSans.variable} ${geistMono.variable} text-foreground antialiased`}>
         <LanguageProvider>
-          <AppFrame>{children}</AppFrame>
+          <AppFrameClient>{children}</AppFrameClient>
         </LanguageProvider>
       </body>
     </html>
