@@ -1,7 +1,7 @@
 "use client";
 
 import { useLanguage } from "@/lib/i18n";
-import { readJSON, writeJSON } from "@/lib/storage";
+import { load, save } from "@/lib/storage";
 import { Check } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
@@ -27,7 +27,7 @@ export default function LevelPage() {
   const [selectedLevel, setSelectedLevel] = useState<string | null>(null);
 
   useEffect(() => {
-    const saved = readJSON<string | null>(LEVEL_STORAGE_KEY, null);
+    const saved = load<string>(LEVEL_STORAGE_KEY);
     const isValid = LEVEL_OPTIONS.some((opt) => opt.id === saved);
     setSelectedLevel(isValid ? saved : null);
   }, []);
@@ -44,7 +44,7 @@ export default function LevelPage() {
 
   const handleContinue = () => {
     if (!selectedLevel) return;
-    writeJSON(LEVEL_STORAGE_KEY, selectedLevel);
+    save(LEVEL_STORAGE_KEY, selectedLevel);
     router.push("/home");
   };
 

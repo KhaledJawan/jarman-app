@@ -2,9 +2,9 @@
 
 import rawLevels from "@/data/levels.json";
 import { useLanguage } from "@/lib/i18n";
-import { readJSON } from "@/lib/storage";
+import { load } from "@/lib/storage";
 import Link from "next/link";
-import { ChevronDown, User } from "lucide-react";
+import { User } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 
 export type LessonSummary = {
@@ -58,6 +58,7 @@ export default function HomePage() {
   const levelKeys = useMemo(() => Object.keys(levelsData) as LevelKey[], []);
 
   const [activeLevel, setActiveLevel] = useState<LevelKey>(() => levelKeys[0] ?? "A1");
+  const [completedLessons, setCompletedLessons] = useState<Record<string, boolean>>({});
   const currentLevel = useMemo(() => levelsData[activeLevel], [activeLevel]);
   const currentLessons = currentLevel?.lessons ?? [];
 
@@ -87,17 +88,17 @@ export default function HomePage() {
   }, [currentLessons]);
 
   useEffect(() => {
-    const storedLevel = readJSON<string | null>("jarman-level", null);
+    const storedLevel = load<string>("jarman-level");
     if (storedLevel) {
       const match = levelKeys.find((key) => key.toLowerCase().startsWith(storedLevel.toLowerCase()));
       if (match) setActiveLevel(match);
     }
   }, [levelKeys]);
 
-  const completedLessons = useMemo(
-    () => readJSON<Record<string, boolean>>("jarman-completed-lessons", {}),
-    [],
-  );
+  useEffect(() => {
+    const stored = load<Record<string, boolean>>("jarman-completed-lessons");
+    setCompletedLessons(stored ?? {});
+  }, []);
 
   const getLevelProgress = (levelId: LevelKey) => {
     const lessons = levelsData[levelId]?.lessons ?? [];
@@ -126,138 +127,128 @@ export default function HomePage() {
     if (firstIncompleteIndex === idx) return "inprogress";
     return "notstarted";
   };
-
   const levelTitle = `${t("home.levelPrefix")} ${currentLevel?.name ?? activeLevel}`;
+  const studiedCount = completedCount;
+  const deckCount = lessonItems.length;
 
   return (
-    <div className="relative flex flex-col gap-6 pb-12">
-      <header className="flex items-center justify-between">
-        <p className="text-xl font-semibold text-neutral-900">Jarman</p>
-        <Link
-          href="/profile"
-          className="inline-flex items-center justify-center rounded-full bg-white p-2 text-neutral-900 shadow ring-1 ring-black/5 transition hover:bg-primary/10"
-          aria-label={t("nav.profile")}
-        >
-          <User size={18} />
-        </Link>
-      </header>
-
-      <div className="sticky top-3 z-20">
-        <button
-          type="button"
-          onClick={() => setShowLevelPicker((prev) => !prev)}
-          className="relative flex w-full items-center justify-between overflow-hidden rounded-3xl bg-gradient-to-r from-orange-400 to-orange-500 px-4 py-4 text-left text-white shadow-lg shadow-orange-300/40 transition hover:opacity-95"
-        >
-          <div className="flex flex-col">
-            <div className="flex items-center gap-2 text-sm font-semibold">
-              <span>{levelTitle}</span>
-              <ChevronDown size={16} />
-            </div>
-            <p className="text-xs opacity-90">{t("home.levelUpgradeHint")}</p>
-          </div>
-          <div className="relative flex h-16 w-16 items-center justify-center rounded-full bg-white/30" aria-label="Level totals">
-            <div
-              className="absolute inset-[6px] rounded-full"
-              style={{
-                background: `conic-gradient(var(--color-primary) ${levelProgress}%, #f1f1f1 ${levelProgress}% 100%)`,
-              }}
-            />
-            <div className="absolute inset-[10px] flex flex-col items-center justify-center rounded-full bg-white text-[10px] font-semibold text-neutral-900 shadow-inner">
-              <span className="text-[10px] uppercase tracking-tight text-gray-600">Total</span>
-              <span className="text-sm text-neutral-900">{levelBreakdown.totalUnits}</span>
-            </div>
-          </div>
-        </button>
-        <div className="px-4 pb-4">
-          <div className="grid grid-cols-3 gap-2">
-            {[
-              { label: "Words", value: levelBreakdown.percentages.words },
-              { label: "Grammar", value: levelBreakdown.percentages.grammar },
-              { label: "Dialogue", value: levelBreakdown.percentages.dialogues },
-            ].map((item) => (
-              <div
-                key={item.label}
-                className="rounded-2xl bg-white/80 px-3 py-2 text-center text-xs font-semibold text-neutral-900 shadow-sm ring-1 ring-black/5"
-              >
-                <p className="text-[11px] text-gray-600">{item.label}</p>
-                <p className="text-sm text-neutral-900">{item.value}%</p>
-              </div>
-            ))}
-          </div>
+    <div className="relative flex flex-col gap-6 pb-16">
+      <div className="relative overflow-hidden rounded-4xl bg-gradient-to-br from-[#e8f0ff] via-white to-[#fff4eb] px-4 pt-5 shadow-sm ring-1 ring-black/5">
+        <div className="absolute right-4 top-4">
+          <Link
+            href="/profile"
+            className="flex h-11 w-11 items-center justify-center rounded-full bg-white shadow-sm ring-1 ring-black/5 transition hover:-translate-y-0.5"
+            aria-label={t("nav.profile")}
+          >
+            <User size={20} className="text-primary" />
+          </Link>
         </div>
-        {showLevelPicker ? (
-          <div className="mt-2 space-y-2">
-            {levelKeys.map((key) => {
-              const progress = getLevelProgress(key);
-              const isActive = activeLevel === key;
-              return (
-                <button
-                  key={key}
-                  onClick={() => {
-                    setActiveLevel(key);
-                    setShowLevelPicker(false);
-                  }}
-                  className={`flex w-full items-center justify-between rounded-3xl border px-4 py-3 text-left shadow-sm transition ${
-                    isActive
-                      ? "border-primary bg-primary/10 text-neutral-900 shadow"
-                      : "border-neutralLight bg-white hover:-translate-y-0.5 hover:shadow"
-                  }`}
-                >
-                  <div>
-                    <p className="text-sm font-semibold text-neutral-900">{levelsData[key]?.name ?? key}</p>
-                    <p className="text-xs text-gray-600">{t("home.levelUpgradeHint")}</p>
-                  </div>
-                  <div className="relative flex h-10 w-10 items-center justify-center rounded-full bg-primary/10" aria-hidden>
-                    <div
-                      className="absolute inset-[4px] rounded-full"
-                      style={{ background: `conic-gradient(var(--color-primary) ${progress}%, #f1f1f1 ${progress}% 100%)` }}
-                    />
-                    <div className="absolute inset-[8px] flex items-center justify-center rounded-full bg-white text-[10px] font-semibold text-neutral-900">
-                      {progress}%
-                    </div>
-                  </div>
-                </button>
-              );
-            })}
+
+        <div className="mt-10 flex flex-col gap-4 pb-4">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-primary">{t("home.levelPrefix")}</p>
+              <h1 className="text-3xl font-bold text-neutral-900">{currentLevel?.name ?? "Your Level"}</h1>
+            </div>
+            <button
+              type="button"
+              onClick={() => setShowLevelPicker((prev) => !prev)}
+              className="rounded-full bg-white px-3 py-2 text-xs font-semibold text-primary shadow-sm ring-1 ring-black/5 transition hover:-translate-y-0.5"
+            >
+              {activeLevel} ▾
+            </button>
           </div>
-        ) : null}
+
+        </div>
       </div>
 
-      {!showLevelPicker ? (
-        <div className="mt-3 space-y-4">
-          {lessonItems.map((lesson, idx) => {
-            const status = lessonStatus(idx, lesson.id);
-            const borderColor =
-              status === "completed"
-                ? "ring-success/50"
-                : status === "inprogress"
-                  ? "ring-primary/50"
-                  : "ring-gray-200";
+      <div className="grid grid-cols-2 gap-3">
+        <div className="rounded-3xl bg-[#ede8ff] px-4 py-3 text-primary shadow-sm ring-1 ring-black/5">
+          <p className="text-3xl font-bold">{studiedCount}</p>
+          <p className="text-sm font-semibold text-primary/80">Studied cards</p>
+        </div>
+        <div className="rounded-3xl bg-[#ffe9d9] px-4 py-3 text-orange-500 shadow-sm ring-1 ring-black/5">
+          <p className="text-3xl font-bold">{deckCount}</p>
+          <p className="text-sm font-semibold text-orange-500/80">Decks created</p>
+        </div>
+      </div>
+
+      {showLevelPicker ? (
+        <div className="space-y-2">
+          {levelKeys.map((key) => {
+            const progress = getLevelProgress(key);
+            const isActive = activeLevel === key;
             return (
-              <div key={lesson.id} className="relative flex gap-3">
-                {idx < lessonItems.length - 1 ? (
-                  <div
-                    className={`absolute left-[26px] top-[52px] h-[calc(100%-52px)] w-0.5 ${LINE_COLOR[status]}`}
-                    aria-hidden
-                  />
-                ) : null}
-                <div
-                  className={`relative flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-full border-2 ${STATUS_COLOR[status]} ${borderColor} shadow`}
-                >
-                  <span className="text-xs font-semibold text-neutral-900">{lesson.title[0] ?? "L"}</span>
+              <button
+                key={key}
+                onClick={() => {
+                  setActiveLevel(key);
+                  setShowLevelPicker(false);
+                }}
+                className={`flex w-full items-center justify-between rounded-3xl border px-4 py-3 text-left shadow-sm transition ${
+                  isActive
+                    ? "border-primary bg-primary/10 text-neutral-900 shadow"
+                    : "border-neutralLight bg-white hover:-translate-y-0.5 hover:shadow"
+                }`}
+              >
+                <div>
+                  <p className="text-sm font-semibold text-neutral-900">{levelsData[key]?.name ?? key}</p>
+                  <p className="text-xs text-gray-600">{t("home.levelUpgradeHint")}</p>
                 </div>
-                <Link
-                  href="/learn"
-                  className="flex-1 rounded-2xl bg-white px-4 py-3 text-left shadow-sm ring-1 ring-black/5 transition hover:-translate-y-0.5 hover:shadow-md"
-                >
-                  <p className="text-sm font-semibold text-neutral-900">{lesson.title}</p>
-                  <p className="text-xs text-gray-600">{t("home.lessonStatusLabel")}</p>
-                </Link>
-              </div>
+                <div className="relative flex h-10 w-10 items-center justify-center rounded-full bg-primary/10" aria-hidden>
+                  <div
+                    className="absolute inset-[4px] rounded-full"
+                    style={{ background: `conic-gradient(var(--color-primary) ${progress}%, #f1f1f1 ${progress}% 100%)` }}
+                  />
+                  <div className="absolute inset-[8px] flex items-center justify-center rounded-full bg-white text-[10px] font-semibold text-neutral-900">
+                    {progress}%
+                  </div>
+                </div>
+              </button>
             );
           })}
         </div>
-      ) : null}
+      ) : (
+        <>
+          <div className="flex items-center justify-between">
+            <h2 className="text-lg font-semibold text-neutral-900">Classes</h2>
+            <span className="text-xs font-semibold text-primary">{levelTitle}</span>
+          </div>
+
+          <div className="space-y-3">
+            {lessonItems.map((lesson, idx) => {
+              const status = lessonStatus(idx, lesson.id);
+              const statusLabel =
+                status === "completed" ? "Completed" : status === "inprogress" ? "In progress" : "Not started";
+              return (
+                <Link
+                  key={lesson.id}
+                  href="/learn"
+                  className="block rounded-3xl bg-white px-4 py-4 shadow-sm ring-1 ring-black/5 transition hover:-translate-y-0.5 hover:shadow-md"
+                >
+                  <p className="text-xs font-semibold text-primary mb-1">{currentLevel?.name ?? "Level"}</p>
+                  <p className="text-base font-semibold text-neutral-900">{lesson.title}</p>
+                  <div className="mt-2 flex items-center gap-2 text-xs font-semibold text-gray-600">
+                    <span
+                      className={`rounded-full px-2 py-1 ring-1 ${
+                        status === "completed"
+                          ? "bg-success/10 text-success ring-success/30"
+                          : status === "inprogress"
+                            ? "bg-primary/10 text-primary ring-primary/30"
+                            : "bg-gray-100 text-gray-700 ring-gray-200"
+                      }`}
+                    >
+                      {statusLabel}
+                    </span>
+                    <span className="text-gray-400">•</span>
+                    <span>{t("home.lessonStatusLabel")}</span>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </>
+      )}
     </div>
   );
 }

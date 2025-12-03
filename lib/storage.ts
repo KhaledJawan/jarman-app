@@ -1,32 +1,23 @@
-"use client";
-
-// Lightweight helpers to safely read/write JSON to localStorage.
 const isBrowser = typeof window !== "undefined";
 
-export function readJSON<T>(key: string, fallback: T): T {
-  if (!isBrowser) return fallback;
+export { isBrowser };
+
+export function load<T = unknown>(key: string): T | null {
+  if (!isBrowser) return null;
   try {
-    const raw = localStorage.getItem(key);
-    if (!raw) return fallback;
-    return JSON.parse(raw) as T;
+    const v = window.localStorage.getItem(key);
+    return v ? (JSON.parse(v) as T) : null;
   } catch (error) {
-    console.error("Failed to parse storage item", key, error);
-    return fallback;
+    console.error("Failed to load storage item", key, error);
+    return null;
   }
 }
 
-export function writeJSON<T>(key: string, value: T) {
+export function save(key: string, value: unknown) {
   if (!isBrowser) return;
   try {
-    localStorage.setItem(key, JSON.stringify(value));
+    window.localStorage.setItem(key, JSON.stringify(value));
   } catch (error) {
-    console.error("Failed to write storage item", key, error);
+    console.error("Failed to save storage item", key, error);
   }
-}
-
-export function updateJSON<T>(key: string, updater: (prev: T) => T, fallback: T) {
-  const current = readJSON<T>(key, fallback);
-  const next = updater(current);
-  writeJSON(key, next);
-  return next;
 }

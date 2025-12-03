@@ -2,190 +2,344 @@
 
 import words from "@/data/word/a11.json";
 import { useLanguage } from "@/lib/i18n";
-import { readJSON, writeJSON } from "@/lib/storage";
-import { scheduleReview, type Difficulty, getReviewRecord } from "@/lib/srs";
-import { Check, ChevronLeft, ChevronRight, Play } from "lucide-react";
-import { useEffect, useMemo, useState, type CSSProperties } from "react";
+import { load, save } from "@/lib/storage";
+import { scheduleReview, getReviewRecords, type ReviewRecord } from "@/lib/srs";
+import { useRouter, useSearchParams } from "next/navigation";
+import { Check, ChevronLeft, ChevronRight, Flag, MoreHorizontal } from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
 
-type Word = (typeof words)[number];
+type WordStatus = "new" | "practice" | "mastered";
 
 const LEARNED_KEY = "jarman-learned-words";
 
+const STATUS_META: Record<WordStatus, { label: string; className: string }> = {
+  new: { label: "New", className: "bg-gray-100 text-gray-700 ring-gray-200" },
+  practice: { label: "Practice", className: "bg-accent/10 text-accent-700 ring-accent/30" },
+  mastered: { label: "Mastered", className: "bg-success/10 text-success ring-success/30" },
+};
+
 export default function VocabularyPage() {
   const { t, currentLanguage } = useLanguage();
-  const [index, setIndex] = useState(0);
-  const [showTranslation, setShowTranslation] = useState(false);
+  const router = useRouter();
+  const searchParams = useSearchParams();
   const [learned, setLearned] = useState<Record<string, boolean>>({});
-  const [reviewMessage, setReviewMessage] = useState<string | null>(null);
-  const [activeCategory, setActiveCategory] = useState<string>("all");
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const [openMenuId, setOpenMenuId] = useState<string | null>(null);
+  const [openCategoryMenuId, setOpenCategoryMenuId] = useState<string | null>(null);
+  const [reviewRecords, setReviewRecords] = useState<Record<string, ReviewRecord>>({});
 
   useEffect(() => {
-    setLearned(readJSON<Record<string, boolean>>(LEARNED_KEY, {}));
+    setLearned(load<Record<string, boolean>>(LEARNED_KEY) ?? {});
+    setReviewRecords(getReviewRecords());
   }, []);
+
+  useEffect(() => {
+    const initial = searchParams.get("category");
+    if (initial) setActiveCategory(initial);
+  }, [searchParams]);
 
   const categories = useMemo(() => {
     const set = new Set(words.map((w) => w.category));
     return ["all", ...Array.from(set)];
   }, []);
 
-  const filteredWords = useMemo(
-    () => (activeCategory === "all" ? words : words.filter((w) => w.category === activeCategory)),
-    [activeCategory],
+  const categoryStats = useMemo(
+    () =>
+      categories.map((cat) => {
+        const list = cat === "all" ? words : words.filter((w) => w.category === cat);
+        const learnedCount = list.filter((w) => learned[w.id]).length;
+        const percent = list.length ? Math.round((learnedCount / list.length) * 100) : 0;
+        return { id: cat, label: cat === "all" ? "All words" : cat, count: list.length, learned: learnedCount, percent };
+      }),
+    [categories, learned],
   );
 
-  const word = useMemo<Word>(() => filteredWords[index] ?? filteredWords[0] ?? words[0], [filteredWords, index]);
-
-  useEffect(() => {
-    setIndex(0);
+  const filteredWords = useMemo(() => {
+    if (!activeCategory || activeCategory === "all") return words;
+    return words.filter((w) => w.category === activeCategory);
   }, [activeCategory]);
+  const activeLearned = useMemo(
+    () => filteredWords.filter((w) => learned[w.id]).length,
+    [filteredWords, learned],
+  );
 
-  const toggleLearned = () => {
-    const next = { ...learned, [word.id]: true };
-    setLearned(next);
-    writeJSON(LEARNED_KEY, next);
+  const getStatus = (wordId: string): WordStatus => {
+    if (learned[wordId]) return "mastered";
+    const reviewRecord = reviewRecords[wordId];
+    if (reviewRecord) return "practice";
+    return "new";
   };
 
-  const changeCard = (delta: number) => {
-    setShowTranslation(false);
-    setReviewMessage(null);
-    setIndex((prev) => {
-      const nextIndex = prev + delta;
-      if (nextIndex < 0) return filteredWords.length - 1;
-      if (nextIndex >= filteredWords.length) return 0;
-      return nextIndex;
-    });
-  };
-
-  const playAudio = () => {
-    if (word?.audio && typeof window !== "undefined") {
-      const audio = new Audio(word.audio);
-      audio.play().catch(() => {});
+  const setStatus = (wordId: string, status: WordStatus) => {
+    if (status === "mastered") {
+      const next = { ...learned, [wordId]: true };
+      setLearned(next);
+      save(LEARNED_KEY, next);
+      setReviewRecords((prev) => {
+        const updated = { ...prev };
+        delete updated[wordId];
+        return updated;
+      });
+    } else if (status === "practice") {
+      const record = scheduleReview(wordId, "medium");
+      setReviewRecords((prev) => ({ ...prev, [wordId]: record }));
+      const next = { ...learned };
+      delete next[wordId];
+      setLearned(next);
+      save(LEARNED_KEY, next);
+    } else {
+      const next = { ...learned };
+      delete next[wordId];
+      setLearned(next);
+      save(LEARNED_KEY, next);
+      setReviewRecords((prev) => {
+        const updated = { ...prev };
+        delete updated[wordId];
+        return updated;
+      });
     }
+    setOpenMenuId(null);
   };
 
-  const markDifficulty = (difficulty: Difficulty) => {
-    if (!word) return;
-    const record = scheduleReview(word.id, difficulty);
-    const nextReview = new Date(record.nextReview).toLocaleDateString();
-    setReviewMessage(`${t("vocab.difficulty")}: ${nextReview}`);
+  const setCategoryProgress = (catId: string, action: "reset" | "mastered") => {
+    const list = catId === "all" ? words : words.filter((w) => w.category === catId);
+    if (action === "mastered") {
+      const next = { ...learned };
+      list.forEach((w) => {
+        next[w.id] = true;
+      });
+      setLearned(next);
+      save(LEARNED_KEY, next);
+    } else {
+      const next = { ...learned };
+      list.forEach((w) => {
+        delete next[w.id];
+      });
+      setLearned(next);
+      save(LEARNED_KEY, next);
+      setReviewRecords((prev) => {
+        const updated = { ...prev };
+        list.forEach((w) => {
+          delete updated[w.id];
+        });
+        return updated;
+      });
+    }
+    setOpenCategoryMenuId(null);
   };
 
-  const translation = currentLanguage === "fa" ? word.translation_fa : word.translation_en;
-  const reviewRecord = word ? getReviewRecord(word.id) : null;
-
-  const heroBg =
-    word?.image && word.image.length > 0
-      ? { backgroundImage: `url(${word.image})` }
-      : { backgroundImage: "linear-gradient(135deg,#dff1ff,#ffe4c4)" };
+  const showWordList = Boolean(activeCategory);
 
   return (
-    <div className="flex flex-col gap-5 pb-12">
-      <header className="space-y-2">
-        <h1 className="text-2xl font-semibold text-neutral-900">{t("vocab.heading")}</h1>
-        <div className="flex items-center gap-2 overflow-x-auto pb-1">
-          {categories.map((cat) => (
+    <div className="flex flex-col gap-6 pb-14">
+      <div className="relative -mx-5 overflow-hidden rounded-b-3xl bg-gradient-to-br from-[#6ea5ff] via-[#7b7bff] to-[#2c7dff] px-6 pb-7 pt-7 text-white">
+        <div className="absolute inset-0 opacity-25">
+          <div className="absolute -left-16 top-8 h-40 w-40 rounded-full bg-white/40 blur-3xl" />
+          <div className="absolute right-0 bottom-0 h-28 w-28 rounded-full bg-white/30 blur-2xl" />
+        </div>
+        <div className="relative flex items-center justify-between">
+          {showWordList ? (
             <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
-              className={`pill whitespace-nowrap ring-1 ring-black/5 ${
-                activeCategory === cat ? "bg-primary text-white shadow-md" : "bg-white text-gray-700"
-              }`}
+              onClick={() => setActiveCategory(null)}
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-white ring-1 ring-white/40 backdrop-blur"
+              aria-label="Back to categories"
             >
-              {cat === "all" ? "All" : cat}
+              <ChevronLeft size={18} />
+            </button>
+          ) : (
+            <span className="h-10 w-10" aria-hidden />
+          )}
+          <button
+            onClick={() => setActiveCategory("all")}
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-white ring-1 ring-white/40 backdrop-blur"
+            aria-label="All decks"
+          >
+            <Flag size={18} />
+          </button>
+        </div>
+
+        <div className="relative mt-6 space-y-2">
+          <h1 className="text-3xl font-bold leading-tight">
+            {showWordList ? activeCategory === "all" ? "All Words" : activeCategory : t("vocab.heading")}
+          </h1>
+          <p className="text-sm text-white/80">
+            {showWordList ? `${activeLearned}/${filteredWords.length} learned` : "Pick a deck to start learning"}
+          </p>
+        </div>
+
+        <div className="relative mt-5 flex items-center gap-6 text-sm font-semibold">
+          <button className="pb-2 text-white">
+            Decks
+            <span className="mt-1 block h-1 w-10 rounded-full bg-yellow-300" />
+          </button>
+          <span className="pb-2 text-white/70">About</span>
+          <span className="pb-2 text-white/70">Leaderboard</span>
+        </div>
+      </div>
+
+      {!showWordList ? (
+        <div className="space-y-3">
+          {categoryStats.map((cat) => (
+            <button
+              key={cat.id}
+              onClick={() => setActiveCategory(cat.id)}
+              className="relative flex min-h-[110px] w-full items-center justify-between gap-4 rounded-3xl bg-white px-5 py-4 text-left shadow-sm ring-1 ring-black/5 transition hover:-translate-y-0.5 hover:shadow-md"
+            >
+              <div className="flex-1 space-y-2">
+                <p className="text-lg font-semibold text-neutral-900">{cat.label}</p>
+                <div className="flex items-center gap-2 text-xs font-semibold text-gray-600">
+                  <span className="rounded-full bg-primary/10 px-2 py-1 text-primary">{cat.learned} learned</span>
+                  <span className="text-gray-300">•</span>
+                  <span className="text-gray-600">{cat.count} total</span>
+                </div>
+                <div className="h-2 w-full overflow-hidden rounded-full bg-neutral-200">
+                  <div
+                    className="h-full rounded-full bg-gradient-to-r from-[#7b7bff] to-[#2c7dff]"
+                    style={{ width: `${cat.percent}%` }}
+                  />
+                </div>
+              </div>
+              <div className="flex items-center gap-2 text-sm font-semibold text-neutral-900">
+                <span>
+                  {cat.learned}/{cat.count}
+                </span>
+                <button
+                  aria-label="Category options"
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setOpenCategoryMenuId((prev) => (prev === cat.id ? null : cat.id));
+                  }}
+                  className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-gray-700 shadow-sm ring-1 ring-black/5 transition hover:bg-primary/10"
+                >
+                  <MoreHorizontal size={16} />
+                </button>
+                {openCategoryMenuId === cat.id ? (
+                  <div
+                    className="absolute right-5 top-16 z-20 w-40 rounded-xl bg-white p-2 text-xs font-semibold text-neutral-900 shadow-lg ring-1 ring-black/5"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setActiveCategory(cat.id);
+                        setOpenCategoryMenuId(null);
+                      }}
+                      className="flex w-full items-center justify-between rounded-lg px-2 py-1.5 text-left hover:bg-primary/5"
+                    >
+                      <span>Open deck</span>
+                      <ChevronRight size={14} className="text-gray-400" />
+                    </button>
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setCategoryProgress(cat.id, "mastered");
+                      }}
+                      className="flex w-full items-center justify-between rounded-lg px-2 py-1.5 text-left hover:bg-primary/5"
+                    >
+                      <span>Mark all mastered</span>
+                      <Check size={14} className="text-success" />
+                    </button>
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setCategoryProgress(cat.id, "reset");
+                      }}
+                      className="flex w-full items-center justify-between rounded-lg px-2 py-1.5 text-left hover:bg-primary/5"
+                    >
+                      <span>Reset progress</span>
+                    </button>
+                  </div>
+                ) : null}
+              </div>
             </button>
           ))}
         </div>
-      </header>
-
-      <div className="card-surface overflow-hidden">
-        <div className="relative h-48 w-full overflow-hidden">
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={heroBg as CSSProperties}
-            aria-hidden="true"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/45 to-black/5" />
-          <div className="relative flex h-full items-end justify-between px-4 pb-3 text-white">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide">{word?.level}</p>
-              <p className="text-3xl font-bold">{word?.word}</p>
-              <p className="text-xs text-white/80">{word?.example}</p>
-            </div>
-            {word?.audio ? (
-              <button
-                onClick={playAudio}
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-primary shadow-lg"
-              >
-                <Play size={20} />
-              </button>
-            ) : null}
+      ) : (
+        <div className="space-y-3">
+          <div className="flex items-center justify-between px-1">
+            <h2 className="text-lg font-semibold text-neutral-900">
+              {activeCategory === "all" ? "All Words" : activeCategory}
+            </h2>
+            <span className="text-xs font-semibold text-primary">
+              {activeLearned}/{filteredWords.length} learned
+            </span>
           </div>
-        </div>
-
-        <div className="grid grid-cols-2 gap-3 px-4 py-4">
-          <div className="rounded-2xl bg-primary/10 px-3 py-2 text-sm">
-            <p className="text-xs text-gray-600">{currentLanguage === "fa" ? "FA" : "EN"}</p>
-            <p className="font-semibold text-neutral-900">{translation}</p>
-          </div>
-          <div className="rounded-2xl bg-accent/10 px-3 py-2 text-sm">
-            <p className="text-xs text-gray-600">{currentLanguage === "fa" ? "EN" : "FA"}</p>
-            <p className="font-semibold text-neutral-900">
-              {currentLanguage === "fa" ? word?.translation_en : word?.translation_fa}
-            </p>
-          </div>
-        </div>
-
-        <div className="flex items-center justify-between px-4 pb-4">
-          <button
-            onClick={() => changeCard(-1)}
-            className="inline-flex items-center gap-1 rounded-full bg-white px-3 py-2 text-sm font-semibold text-neutral-900 shadow-sm ring-1 ring-black/5 transition hover:bg-neutralLight"
-          >
-            <ChevronLeft size={18} /> {t("vocab.prev")}
-          </button>
-          <div className="flex items-center gap-2">
-            {learned[word.id] ? (
-              <span className="inline-flex items-center gap-1 rounded-full bg-success/10 px-3 py-1 text-xs font-semibold text-success ring-1 ring-success/30">
-                <Check size={14} /> {t("vocab.learned")}
-              </span>
-            ) : null}
-            <button
-              onClick={() => changeCard(1)}
-              className="inline-flex items-center gap-1 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white shadow-md transition hover:bg-primary/90"
-            >
-              {t("vocab.next")} <ChevronRight size={18} />
-            </button>
-          </div>
-        </div>
-
-        <div className="border-t border-neutralLight px-4 py-3">
-          <div className="flex flex-wrap items-center gap-2">
-            <button
-              onClick={toggleLearned}
-              className="rounded-full bg-success px-4 py-2 text-xs font-semibold text-white shadow-sm transition hover:bg-success/90"
-            >
-              {t("vocab.markLearned")}
-            </button>
-            <div className="flex items-center gap-2 rounded-full bg-neutralLight px-3 py-2 text-xs font-semibold text-neutral-900">
-              <span>{t("vocab.difficulty")}</span>
-              {(["easy", "medium", "hard"] as Difficulty[]).map((difficulty) => (
-                <button
-                  key={difficulty}
-                  onClick={() => markDifficulty(difficulty)}
-                  className="rounded-full bg-white px-3 py-1 text-[11px] font-semibold shadow-sm ring-1 ring-black/5 transition hover:bg-primary/10"
+          <div className="space-y-2">
+            {filteredWords.map((item) => {
+              const status = getStatus(item.id);
+              const meta = STATUS_META[status];
+              return (
+                <div
+                  key={item.id}
+                  className="flex min-h-[110px] w-full items-center justify-between gap-3 rounded-3xl bg-white px-5 py-4 shadow-sm ring-1 ring-black/5"
                 >
-                  {t(`vocab.${difficulty}`)}
-                </button>
-              ))}
-            </div>
+                  <button
+                    onClick={() =>
+                      router.push(`/vocabulary/${item.id}${activeCategory ? `?category=${activeCategory}` : ""}`)
+                    }
+                    className="flex flex-1 flex-col items-start text-left"
+                  >
+                    <p className="text-lg font-semibold text-neutral-900">{item.word}</p>
+                    <p className="text-sm text-gray-600">
+                      {currentLanguage === "fa" ? item.translation_fa : item.translation_en}
+                    </p>
+                    <div className="mt-2 inline-flex items-center gap-2 text-xs font-semibold text-gray-600">
+                      <span className={`rounded-full px-3 py-1 ring-1 ${meta.className}`}>{meta.label}</span>
+                      <span className="text-gray-300">•</span>
+                      <span>{t("home.lessonStatusLabel")}</span>
+                    </div>
+                  </button>
+                  <div className="relative flex items-center gap-2">
+                    <button
+                      aria-label="Edit status"
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setOpenMenuId((prev) => (prev === item.id ? null : item.id));
+                      }}
+                      className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-gray-700 shadow-sm ring-1 ring-black/5 transition hover:bg-primary/10"
+                    >
+                      <MoreHorizontal size={16} />
+                    </button>
+                    {openMenuId === item.id ? (
+                      <div
+                        className="absolute right-0 top-10 z-20 w-36 rounded-xl bg-white p-2 text-xs font-semibold text-neutral-900 shadow-lg ring-1 ring-black/5"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        {(
+                          [
+                            { id: "mastered", label: "Mark mastered" },
+                            { id: "practice", label: "Need practice" },
+                            { id: "new", label: "Reset to new" },
+                          ] as { id: WordStatus; label: string }[]
+                        ).map((option) => (
+                          <button
+                            key={option.id}
+                            type="button"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setStatus(item.id, option.id);
+                            }}
+                            className="flex w-full items-center justify-between rounded-lg px-2 py-1.5 text-left hover:bg-primary/5"
+                          >
+                            <span>{option.label}</span>
+                            {status === option.id ? <Check size={14} className="text-primary" /> : null}
+                          </button>
+                        ))}
+                      </div>
+                    ) : null}
+                    <ChevronRight size={18} className="text-gray-400" />
+                  </div>
+                </div>
+              );
+            })}
           </div>
-          {reviewRecord ? (
-            <p className="mt-2 text-xs text-gray-500">
-              {t("vocab.difficulty")}: {new Date(reviewRecord.nextReview).toLocaleDateString()}
-            </p>
-          ) : null}
-          {reviewMessage ? <p className="mt-1 text-xs text-gray-500">{reviewMessage}</p> : null}
         </div>
-      </div>
+      )}
     </div>
   );
 }

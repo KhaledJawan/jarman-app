@@ -1,6 +1,6 @@
 "use client";
 
-import { BookOpen, Home, ListChecks, MessageCircle, User } from "lucide-react";
+import { BookOpen, ClipboardList, FolderClosed, Home, MessageSquare } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLanguage } from "@/lib/i18n";
@@ -8,9 +8,8 @@ import { useLanguage } from "@/lib/i18n";
 const tabs = [
   { href: "/home", icon: Home, labelKey: "nav.home" },
   { href: "/learn", icon: BookOpen, labelKey: "nav.learn" },
-  { href: "/vocabulary", icon: ListChecks, labelKey: "nav.vocabulary" },
-  { href: "/dialogues", icon: MessageCircle, labelKey: "nav.dialogues" },
-  { href: "/profile", icon: User, labelKey: "nav.profile" },
+  { href: "/vocabulary", icon: FolderClosed, labelKey: "nav.vocabulary" },
+  { href: "/dialogues", icon: MessageSquare, labelKey: "nav.dialogues" },
 ];
 
 export function BottomNavigation() {
@@ -18,8 +17,8 @@ export function BottomNavigation() {
   const { t } = useLanguage();
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-20 border-t border-white/80 bg-white/90 backdrop-blur-xl shadow-[0_-6px_24px_rgba(0,0,0,0.05)]">
-      <div className="mx-auto flex max-w-md items-center justify-between px-4 pb-[calc(env(safe-area-inset-bottom)+10px)] pt-2 text-[11px] font-semibold text-gray-500">
+    <nav className="fixed bottom-0 left-0 right-0 z-20 bg-white/85 backdrop-blur-md shadow-[0_-10px_30px_rgba(0,0,0,0.08)]">
+      <div className="mx-auto flex max-w-md items-center justify-between gap-2 px-4 pb-[calc(env(safe-area-inset-bottom)+10px)] pt-3">
         {tabs.map((tab) => {
           const Icon = tab.icon;
           const isActive = pathname === tab.href;
@@ -27,16 +26,23 @@ export function BottomNavigation() {
             <Link
               key={tab.href}
               href={tab.href}
-              className="flex flex-1 flex-col items-center gap-1"
+              className={`group flex flex-1 items-center justify-center gap-2 rounded-full px-3 py-2 text-sm font-semibold transition-all duration-200 ${
+                isActive ? "bg-neutral-100 text-primary" : "text-gray-500 hover:text-primary"
+              }`}
             >
+              <Icon
+                size={22}
+                strokeWidth={isActive ? 2.2 : 2}
+                className={`transition-all duration-200 ${isActive ? "text-primary" : "text-gray-500"}`}
+              />
               <span
-                className={`flex h-10 w-10 items-center justify-center rounded-full shadow-sm ring-1 ring-black/5 transition ${
-                  isActive ? "bg-primary text-white shadow-md" : "bg-white text-gray-600 hover:bg-primary/10"
+                className={`overflow-hidden text-sm transition-all duration-200 ${
+                  isActive ? "max-w-[120px] opacity-100" : "max-w-0 opacity-0"
                 }`}
               >
-                <Icon size={20} strokeWidth={isActive ? 2.4 : 2} />
+                {t(tab.labelKey)}
               </span>
-              <span className={`leading-none ${isActive ? "text-primary" : "text-gray-500"}`}>{t(tab.labelKey)}</span>
+              <span className="sr-only">{t(tab.labelKey)}</span>
             </Link>
           );
         })}

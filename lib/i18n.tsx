@@ -3,6 +3,7 @@
 import en from "@/data/i18n/en.json";
 import fa from "@/data/i18n/fa.json";
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
+import { isBrowser, load, save } from "./storage";
 
 type Language = "fa" | "en";
 type TranslationDict = Record<string, string>;
@@ -30,7 +31,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [currentLanguage, setCurrentLanguage] = useState<Language>("fa");
 
   useEffect(() => {
-    const saved = typeof window !== "undefined" ? (localStorage.getItem(STORAGE_KEY) as Language | null) : null;
+    const saved = load<Language>(STORAGE_KEY);
     if (saved === "fa" || saved === "en") {
       setCurrentLanguage(saved);
     }
@@ -38,15 +39,15 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
   const setLanguage = useCallback((lang: Language) => {
     setCurrentLanguage(lang);
-    if (typeof window !== "undefined") {
-      localStorage.setItem(STORAGE_KEY, lang);
+    if (isBrowser) {
+      save(STORAGE_KEY, lang);
       document.documentElement.lang = lang;
       document.documentElement.dir = lang === "fa" ? "rtl" : "ltr";
     }
   }, []);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
+    if (isBrowser) {
       document.documentElement.lang = currentLanguage;
       document.documentElement.dir = currentLanguage === "fa" ? "rtl" : "ltr";
     }

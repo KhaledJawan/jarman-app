@@ -2,7 +2,7 @@
 
 import words from "@/data/word/a11.json";
 import { useLanguage } from "@/lib/i18n";
-import { readJSON, writeJSON } from "@/lib/storage";
+import { load, save } from "@/lib/storage";
 import { LogOut, User } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 
@@ -15,15 +15,15 @@ export default function ProfilePage() {
   const [learnedWords, setLearnedWords] = useState<Record<string, boolean>>({});
 
   useEffect(() => {
-    setStats(readJSON(STATS_KEY, { xp: 24, streak: 3 }));
-    setLearnedWords(readJSON(LEARNED_KEY, {}));
+    setStats(load(STATS_KEY) ?? { xp: 24, streak: 3 });
+    setLearnedWords(load(LEARNED_KEY) ?? {});
   }, []);
 
   const learnedCount = useMemo(() => Object.keys(learnedWords).length, [learnedWords]);
 
   const toggleLanguage = (lang: "fa" | "en") => {
     setLanguage(lang);
-    writeJSON("jarman-language", lang);
+    save("jarman-language", lang);
   };
 
   return (

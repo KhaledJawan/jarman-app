@@ -1,6 +1,6 @@
 "use client";
 
-import { readJSON, writeJSON } from "./storage";
+import { load, save } from "./storage";
 
 export type Difficulty = "easy" | "medium" | "hard";
 
@@ -19,17 +19,25 @@ const intervals: Record<Difficulty, number> = {
   hard: 1000 * 60 * 60 * 12, // 12h
 };
 
+function getReviewMap() {
+  return load<Record<string, ReviewRecord>>(STORAGE_KEY) ?? {};
+}
+
 export function scheduleReview(itemId: string, difficulty: Difficulty): ReviewRecord {
   const now = Date.now();
   const nextReview = now + intervals[difficulty];
   const record: ReviewRecord = { itemId, difficulty, lastReviewed: now, nextReview };
-  const map = readJSON<Record<string, ReviewRecord>>(STORAGE_KEY, {});
+  const map = getReviewMap();
   map[itemId] = record;
-  writeJSON(STORAGE_KEY, map);
+  save(STORAGE_KEY, map);
   return record;
 }
 
 export function getReviewRecord(itemId: string): ReviewRecord | null {
-  const map = readJSON<Record<string, ReviewRecord>>(STORAGE_KEY, {});
+  const map = getReviewMap();
   return map[itemId] ?? null;
+}
+
+export function getReviewRecords() {
+  return getReviewMap();
 }

@@ -2,9 +2,9 @@
 
 import levelsData from "@/data/levels.json";
 import { useLanguage } from "@/lib/i18n";
-import { readJSON } from "@/lib/storage";
+import { load } from "@/lib/storage";
 import { ChevronRight, Play } from "lucide-react";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 type Levels = typeof levelsData;
 type LevelKey = keyof Levels;
@@ -13,7 +13,12 @@ type Lesson = Levels[LevelKey]["lessons"][number];
 export default function LearnPage() {
   const { t } = useLanguage();
   const [activeLevel, setActiveLevel] = useState<LevelKey>(() => (Object.keys(levelsData)[0] as LevelKey) ?? "A1");
-  const completedLessons = readJSON<Record<string, boolean>>("jarman-completed-lessons", {});
+  const [completedLessons, setCompletedLessons] = useState<Record<string, boolean>>({});
+
+  useEffect(() => {
+    const stored = load<Record<string, boolean>>("jarman-completed-lessons");
+    setCompletedLessons(stored ?? {});
+  }, []);
 
   const entries = useMemo(() => Object.entries(levelsData) as [LevelKey, Levels[LevelKey]][], []);
   const activeLessons = levelsData[activeLevel]?.lessons ?? [];

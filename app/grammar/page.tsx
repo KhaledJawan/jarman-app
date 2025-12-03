@@ -2,7 +2,7 @@
 
 import grammarTopics from "@/data/grammar.json";
 import { useLanguage } from "@/lib/i18n";
-import { readJSON, writeJSON } from "@/lib/storage";
+import { load, save } from "@/lib/storage";
 import { CheckCircle, Play } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 
@@ -20,7 +20,8 @@ export default function GrammarPage() {
   const [activeLevel, setActiveLevel] = useState<string>("all");
 
   useEffect(() => {
-    setCompleted(readJSON<Record<string, boolean>>(COMPLETED_KEY, {}));
+    const stored = load<Record<string, boolean>>(COMPLETED_KEY);
+    setCompleted(stored ?? {});
   }, []);
 
   const filteredTopics = useMemo(
@@ -38,7 +39,7 @@ export default function GrammarPage() {
     if (allCorrect) {
       const next = { ...completed, [selected.id]: true };
       setCompleted(next);
-      writeJSON(COMPLETED_KEY, next);
+      save(COMPLETED_KEY, next);
     }
   };
 

@@ -2,7 +2,7 @@
 
 import dialogues from "@/data/dialogues.json";
 import { useLanguage } from "@/lib/i18n";
-import { readJSON, writeJSON } from "@/lib/storage";
+import { load, save } from "@/lib/storage";
 import { Play, RotateCw } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 
@@ -17,9 +17,11 @@ export default function DialoguesPage() {
   const [stepIndex, setStepIndex] = useState(0);
   const [feedback, setFeedback] = useState<string | null>(null);
   const [completed, setCompleted] = useState<Record<string, boolean>>({});
+  const isBrowser = typeof window !== "undefined";
 
   useEffect(() => {
-    setCompleted(readJSON<Record<string, boolean>>(COMPLETED_KEY, {}));
+    const stored = load<Record<string, boolean>>(COMPLETED_KEY);
+    setCompleted(stored ?? {});
   }, []);
 
   const activeDialogue = useMemo<Dialogue | null>(
@@ -28,7 +30,7 @@ export default function DialoguesPage() {
   );
 
   const playAudio = (step: Step) => {
-    if ("audio" in step && step.audio && typeof window !== "undefined") {
+    if ("audio" in step && step.audio && isBrowser) {
       const audio = new Audio(step.audio as string);
       audio.play().catch(() => {});
     }
@@ -47,7 +49,7 @@ export default function DialoguesPage() {
     if (nextIndex >= activeDialogue.steps.length) {
       const next = { ...completed, [activeDialogue.id]: true };
       setCompleted(next);
-      writeJSON(COMPLETED_KEY, next);
+      save(COMPLETED_KEY, next);
       setFeedback(null);
       return;
     }
