@@ -1,11 +1,29 @@
 "use client";
 
-import levelsData from "@/data/levels.json";
+import rawLevels from "@/data/levels.json";
 import { useLanguage } from "@/lib/i18n";
 import { readJSON } from "@/lib/storage";
 import Link from "next/link";
 import { ChevronDown, User } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
+
+export type LessonSummary = {
+  id: string;
+  title: string;
+  description?: string;
+  words: number;
+  grammar: number;
+  dialogues: number;
+};
+
+export type Level = {
+  name: string;
+  lessons: LessonSummary[];
+};
+
+export type LevelsMap = Record<string, Level>;
+
+const levelsData = rawLevels as LevelsMap;
 
 type LevelKey = string;
 type LessonStatus = "completed" | "inprogress" | "notstarted";
@@ -37,16 +55,15 @@ const DEFAULT_LESSONS = [
 
 export default function HomePage() {
   const { t } = useLanguage();
-  const levelKeys: LevelKey[] = ["Beginner", "A1", "A2", "B1", "B2", "C1"];
+  const levelKeys = useMemo(() => Object.keys(levelsData) as LevelKey[], []);
 
-  const [activeLevel, setActiveLevel] = useState<LevelKey>(() => {
-    const desired = levelKeys.find((k) => k.startsWith("A2"));
-    return desired ?? levelKeys[0];
-  });
+  const [activeLevel, setActiveLevel] = useState<LevelKey>(() => levelKeys[0] ?? "A1");
+  const currentLevel = useMemo(() => levelsData[activeLevel], [activeLevel]);
+  const currentLessons = currentLevel?.lessons ?? [];
+
   const [showLevelPicker, setShowLevelPicker] = useState(false);
   const levelBreakdown = useMemo(() => {
-    const lessons = levelsData[activeLevel]?.lessons ?? [];
-    const totals = lessons.reduce(
+    const totals = currentLessons.reduce(
       (acc, lesson) => {
         acc.words += lesson.words ?? 0;
         acc.grammar += lesson.grammar ?? 0;
@@ -67,7 +84,7 @@ export default function HomePage() {
       },
       totalUnits,
     };
-  }, [activeLevel]);
+  }, [currentLessons]);
 
   useEffect(() => {
     const storedLevel = readJSON<string | null>("jarman-level", null);
@@ -90,16 +107,15 @@ export default function HomePage() {
   };
 
   const lessonItems = useMemo(() => {
-    const lessons = levelsData[activeLevel]?.lessons ?? [];
-    if (lessons.length > 1) {
-      return lessons.map((lesson, idx) => ({
+    if (currentLessons.length > 1) {
+      return currentLessons.map((lesson, idx) => ({
         id: lesson.id ?? `lesson-${idx + 1}`,
         title: lesson.title ?? `Lesson ${idx + 1}`,
       }));
     }
     // fallback: keep the full mock list so the page stays populated
     return DEFAULT_LESSONS.map((title, idx) => ({ id: `lesson-${idx + 1}`, title }));
-  }, [activeLevel]);
+  }, [currentLessons]);
 
   const completedCount = lessonItems.filter((lesson) => completedLessons[lesson.id]).length;
   const levelProgress = Math.round((completedCount / Math.max(lessonItems.length, 1)) * 100);
@@ -111,7 +127,7 @@ export default function HomePage() {
     return "notstarted";
   };
 
-  const levelTitle = `${t("home.levelPrefix")} ${levelsData[activeLevel]?.name ?? activeLevel}`;
+  const levelTitle = `${t("home.levelPrefix")} ${currentLevel?.name ?? activeLevel}`;
 
   return (
     <div className="relative flex flex-col gap-6 pb-12">
