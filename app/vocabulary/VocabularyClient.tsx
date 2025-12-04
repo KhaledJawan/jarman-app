@@ -44,6 +44,7 @@ const CUSTOM_WORDS_KEY = "jarman-custom-words";
 const LEVEL_KEY = "jarman-level";
 
 const LEVEL_ORDER = ["A1", "A2", "B1", "B2", "C1"] as const;
+type LevelId = (typeof LEVEL_ORDER)[number];
 
 const TOPIC_LABELS: Record<
   string,
@@ -83,7 +84,7 @@ export default function VocabularyPage() {
   const searchParams = useSearchParams();
   const [learned, setLearned] = useState<Record<string, boolean>>({});
   const [marked, setMarked] = useState<Record<string, boolean>>({});
-  const [activeLevel, setActiveLevel] = useState<string>("A2");
+  const [activeLevel, setActiveLevel] = useState<LevelId>(LEVEL_ORDER[0]);
   const [showLevelMenu, setShowLevelMenu] = useState(false);
   const [customWords, setCustomWords] = useState<CustomWord[]>([]);
   const [showNewWordModal, setShowNewWordModal] = useState(false);
@@ -114,7 +115,10 @@ export default function VocabularyPage() {
     setReviewRecords(getReviewRecords());
     const savedLevel = load<string>(LEVEL_KEY);
     if (savedLevel) {
-      setActiveLevel(normalizeLevel(savedLevel));
+      const normalized = normalizeLevel(savedLevel);
+      if ((LEVEL_ORDER as readonly string[]).includes(normalized)) {
+        setActiveLevel(normalized as LevelId);
+      }
     }
   }, []);
 
@@ -270,7 +274,7 @@ export default function VocabularyPage() {
     setShowNewWordModal(false);
   };
 
-  const changeLevel = (level: string) => {
+  const changeLevel = (level: LevelId) => {
     setActiveLevel(level);
     save(LEVEL_KEY, level);
     setShowLevelMenu(false);
