@@ -6,12 +6,13 @@ import { load, save } from "@/lib/storage";
 import { scheduleReview, type Difficulty, getReviewRecords, type ReviewRecord } from "@/lib/srs";
 import Link from "next/link";
 import { useParams, useSearchParams } from "next/navigation";
-import { Check, ChevronLeft, ChevronRight, Play } from "lucide-react";
+import { Bookmark, BookmarkCheck, Check, ChevronLeft, ChevronRight, Play } from "lucide-react";
 import { useEffect, useMemo, useState, type CSSProperties } from "react";
 
 type Word = (typeof words)[number];
 
 const LEARNED_KEY = "jarman-learned-words";
+const MARKED_KEY = "jarman-marked-words";
 
 export default function VocabularyFlashcardPage() {
   const { t, currentLanguage } = useLanguage();
@@ -21,13 +22,16 @@ export default function VocabularyFlashcardPage() {
 
   const [index, setIndex] = useState(0);
   const [learned, setLearned] = useState<Record<string, boolean>>({});
+  const [marked, setMarked] = useState<Record<string, boolean>>({});
   const [reviewMessage, setReviewMessage] = useState<string | null>(null);
   const [reviewRecords, setReviewRecords] = useState<Record<string, ReviewRecord>>({});
 
   const category = searchParams.get("category") ?? "all";
+  const categoryLabel = category === "all" ? t("vocab.tab.all") : category === "marked" ? t("vocab.tab.marked") : category;
 
   useEffect(() => {
     setLearned(load<Record<string, boolean>>(LEARNED_KEY) ?? {});
+    setMarked(load<Record<string, boolean>>(MARKED_KEY) ?? {});
     setReviewRecords(getReviewRecords());
   }, []);
 
@@ -49,12 +53,25 @@ export default function VocabularyFlashcardPage() {
   const word = filteredWords[index] ?? filteredWords[0];
   const translation = currentLanguage === "fa" ? word?.translation_fa : word?.translation_en;
   const reviewRecord = word ? reviewRecords[word.id] ?? null : null;
+  const isMarked = word ? !!marked[word.id] : false;
 
   const toggleLearned = () => {
     if (!word) return;
     const next = { ...learned, [word.id]: true };
     setLearned(next);
     save(LEARNED_KEY, next);
+  };
+
+  const toggleMarked = () => {
+    if (!word) return;
+    const next = { ...marked };
+    if (next[word.id]) {
+      delete next[word.id];
+    } else {
+      next[word.id] = true;
+    }
+    setMarked(next);
+    save(MARKED_KEY, next);
   };
 
   const changeCard = (delta: number) => {
@@ -90,9 +107,9 @@ export default function VocabularyFlashcardPage() {
   if (!word) {
     return (
       <div className="flex flex-col gap-4 pb-12">
-        <p className="text-lg font-semibold text-neutral-900">No words found.</p>
+        <p className="text-lg font-semibold text-neutral-900">{t("vocab.empty.generic")}</p>
         <Link href="/vocabulary" className="text-primary underline">
-          Back to vocabulary
+          {t("vocab.backToList")}
         </Link>
       </div>
     );
@@ -108,7 +125,7 @@ export default function VocabularyFlashcardPage() {
           ← {t("nav.vocabulary")}
         </Link>
         <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
-          {category === "all" ? "All words" : category}
+          {categoryLabel}
         </span>
       </div>
 
@@ -131,14 +148,24 @@ export default function VocabularyFlashcardPage() {
               <p className="text-3xl font-bold">{word.word}</p>
               <p className="text-xs text-white/80">{word.example}</p>
             </div>
-            {word.audio ? (
+            <div className="flex items-center gap-2">
               <button
-                onClick={playAudio}
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-primary shadow-lg"
+                type="button"
+                aria-label={isMarked ? t("vocab.aria.unmarkWord") : t("vocab.aria.markWord")}
+                onClick={toggleMarked}
+                className={`flex h-10 w-10 items-center justify-center rounded-full ${isMarked ? "bg-primary/90 text-white" : "bg-white/90 text-primary"} shadow-lg`}
               >
-                <Play size={20} />
+                {isMarked ? <BookmarkCheck size={20} /> : <Bookmark size={20} />}
               </button>
-            ) : null}
+              {word.audio ? (
+                <button
+                  onClick={playAudio}
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-primary shadow-lg"
+                >
+                  <Play size={20} />
+                </button>
+              ) : null}
+            </div>
           </div>
         </div>
 

@@ -40,22 +40,13 @@ const LINE_COLOR: Record<LessonStatus, string> = {
   notstarted: "bg-gray-200",
 };
 
-const DEFAULT_LESSONS = [
-  "Basics",
-  "Lesson 2",
-  "Lesson 3",
-  "Lesson 4",
-  "Lesson 5",
-  "Lesson 6",
-  "Lesson 7",
-  "Lesson 8",
-  "Lesson 9",
-  "Lesson 10",
-];
-
 export default function HomePage() {
   const { t } = useLanguage();
   const levelKeys = useMemo(() => Object.keys(levelsData) as LevelKey[], []);
+  const defaultLessons = useMemo(
+    () => Array.from({ length: 10 }, (_, idx) => ({ id: `lesson-${idx + 1}`, title: `${t("home.lessonLabel")} ${idx + 1}` })),
+    [t],
+  );
 
   const [activeLevel, setActiveLevel] = useState<LevelKey>(() => levelKeys[0] ?? "A1");
   const [completedLessons, setCompletedLessons] = useState<Record<string, boolean>>({});
@@ -102,7 +93,7 @@ export default function HomePage() {
 
   const getLevelProgress = (levelId: LevelKey) => {
     const lessons = levelsData[levelId]?.lessons ?? [];
-    const total = lessons.length > 0 ? lessons.length : DEFAULT_LESSONS.length;
+    const total = lessons.length > 0 ? lessons.length : defaultLessons.length;
     const done = lessons.length > 0 ? lessons.filter((lesson) => completedLessons[lesson.id]).length : 0;
     return Math.round((done / Math.max(total, 1)) * 100);
   };
@@ -111,12 +102,12 @@ export default function HomePage() {
     if (currentLessons.length > 1) {
       return currentLessons.map((lesson, idx) => ({
         id: lesson.id ?? `lesson-${idx + 1}`,
-        title: lesson.title ?? `Lesson ${idx + 1}`,
+        title: lesson.title ?? `${t("home.lessonLabel")} ${idx + 1}`,
       }));
     }
     // fallback: keep the full mock list so the page stays populated
-    return DEFAULT_LESSONS.map((title, idx) => ({ id: `lesson-${idx + 1}`, title }));
-  }, [currentLessons]);
+    return defaultLessons;
+  }, [currentLessons, defaultLessons]);
 
   const completedCount = lessonItems.filter((lesson) => completedLessons[lesson.id]).length;
   const levelProgress = Math.round((completedCount / Math.max(lessonItems.length, 1)) * 100);
@@ -127,7 +118,7 @@ export default function HomePage() {
     if (firstIncompleteIndex === idx) return "inprogress";
     return "notstarted";
   };
-  const levelTitle = `${t("home.levelPrefix")} ${currentLevel?.name ?? activeLevel}`;
+  const levelTitle = `${t("home.levelPrefix")} ${currentLevel?.name ?? t("home.levelUnknown")}`;
   const studiedCount = completedCount;
   const deckCount = lessonItems.length;
 
@@ -148,7 +139,7 @@ export default function HomePage() {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-xs font-semibold uppercase tracking-wide text-primary">{t("home.levelPrefix")}</p>
-              <h1 className="text-3xl font-bold text-neutral-900">{currentLevel?.name ?? "Your Level"}</h1>
+              <h1 className="text-3xl font-bold text-neutral-900">{currentLevel?.name ?? t("home.levelUnknown")}</h1>
             </div>
             <button
               type="button"
@@ -165,11 +156,11 @@ export default function HomePage() {
       <div className="grid grid-cols-2 gap-3">
         <div className="rounded-3xl bg-[#ede8ff] px-4 py-3 text-primary shadow-sm ring-1 ring-black/5">
           <p className="text-3xl font-bold">{studiedCount}</p>
-          <p className="text-sm font-semibold text-primary/80">Studied cards</p>
+          <p className="text-sm font-semibold text-primary/80">{t("home.stats.studiedCards")}</p>
         </div>
         <div className="rounded-3xl bg-[#ffe9d9] px-4 py-3 text-orange-500 shadow-sm ring-1 ring-black/5">
           <p className="text-3xl font-bold">{deckCount}</p>
-          <p className="text-sm font-semibold text-orange-500/80">Decks created</p>
+          <p className="text-sm font-semibold text-orange-500/80">{t("home.stats.decksCreated")}</p>
         </div>
       </div>
 
@@ -211,15 +202,19 @@ export default function HomePage() {
       ) : (
         <>
           <div className="flex items-center justify-between">
-            <h2 className="text-lg font-semibold text-neutral-900">Classes</h2>
+            <h2 className="text-lg font-semibold text-neutral-900">{t("home.classes")}</h2>
             <span className="text-xs font-semibold text-primary">{levelTitle}</span>
           </div>
 
           <div className="space-y-3">
             {lessonItems.map((lesson, idx) => {
               const status = lessonStatus(idx, lesson.id);
-              const statusLabel =
-                status === "completed" ? "Completed" : status === "inprogress" ? "In progress" : "Not started";
+              const statusLabels: Record<LessonStatus, string> = {
+                completed: t("home.lesson.status.completed"),
+                inprogress: t("home.lesson.status.inProgress"),
+                notstarted: t("home.lesson.status.notStarted"),
+              };
+              const statusLabel = statusLabels[status];
               return (
                 <Link
                   key={lesson.id}

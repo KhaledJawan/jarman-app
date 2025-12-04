@@ -17,12 +17,16 @@ type LanguageContextValue = {
   currentLanguage: Language;
   setLanguage: (lang: Language) => void;
   t: (key: string) => string;
+  direction: "rtl" | "ltr";
+  isRTL: boolean;
 };
 
 const LanguageContext = createContext<LanguageContextValue>({
   currentLanguage: "fa",
   setLanguage: () => {},
   t: (key) => key,
+  direction: "rtl",
+  isRTL: true,
 });
 
 const STORAGE_KEY = "jarman-language";
@@ -43,6 +47,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
       save(STORAGE_KEY, lang);
       document.documentElement.lang = lang;
       document.documentElement.dir = lang === "fa" ? "rtl" : "ltr";
+      document.documentElement.dataset.dir = lang === "fa" ? "rtl" : "ltr";
     }
   }, []);
 
@@ -50,6 +55,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     if (isBrowser) {
       document.documentElement.lang = currentLanguage;
       document.documentElement.dir = currentLanguage === "fa" ? "rtl" : "ltr";
+      document.documentElement.dataset.dir = currentLanguage === "fa" ? "rtl" : "ltr";
     }
   }, [currentLanguage]);
 
@@ -66,6 +72,8 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
       currentLanguage,
       setLanguage,
       t: translate,
+      direction: currentLanguage === "fa" ? "rtl" : "ltr",
+      isRTL: currentLanguage === "fa",
     }),
     [currentLanguage, setLanguage, translate],
   );

@@ -6,10 +6,10 @@ import { usePathname } from "next/navigation";
 import { useLanguage } from "@/lib/i18n";
 
 const tabs = [
-  { href: "/home", icon: Home, labelKey: "nav.home" },
-  { href: "/learn", icon: BookOpen, labelKey: "nav.learn" },
-  { href: "/vocabulary", icon: FolderClosed, labelKey: "nav.vocabulary" },
-  { href: "/dialogues", icon: MessageSquare, labelKey: "nav.dialogues" },
+  { href: "/home", icon: Home, labelKey: "nav.home", dataId: "nav-home" },
+  { href: "/learn", icon: BookOpen, labelKey: "nav.learn", dataId: "nav-learn" },
+  { href: "/vocabulary", icon: FolderClosed, labelKey: "nav.vocabulary", dataId: "nav-vocabulary" },
+  { href: "/dialogues", icon: MessageSquare, labelKey: "nav.dialogues", dataId: "nav-dialogues" },
 ];
 
 export function BottomNavigation() {
@@ -26,6 +26,7 @@ export function BottomNavigation() {
             <Link
               key={tab.href}
               href={tab.href}
+              data-id={tab.dataId}
               className={`group flex flex-1 items-center justify-center gap-2 rounded-full px-3 py-2 text-sm font-semibold transition-all duration-200 ${
                 isActive ? "bg-neutral-100 text-primary" : "text-gray-500 hover:text-primary"
               }`}

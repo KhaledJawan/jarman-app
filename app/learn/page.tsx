@@ -76,7 +76,7 @@ export default function LearnPage() {
                 <div className="space-y-1">
                   <p className="text-sm font-semibold text-neutral-900">{lesson.title}</p>
                   <p className="text-xs text-gray-600">
-                    {lesson.words} words • {lesson.grammar} grammar • {lesson.dialogues} dialogues
+                    {lesson.words} {t("learn.meta.words")} • {lesson.grammar} {t("learn.meta.grammar")} • {lesson.dialogues} {t("learn.meta.dialogues")}
                   </p>
                   <div className="h-2 w-32 overflow-hidden rounded-full bg-white/80">
                     <div className="h-full bg-primary" style={{ width: `${progress}%` }} />

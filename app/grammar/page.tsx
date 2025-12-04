@@ -51,7 +51,7 @@ export default function GrammarPage() {
             {t("grammar.heading")}
           </div>
           <div className="absolute bottom-4 left-4 text-left">
-            <p className="text-lg font-semibold text-neutral-900">Grammar courses</p>
+            <p className="text-lg font-semibold text-neutral-900">{t("grammar.courses")}</p>
             <p className="text-xs text-gray-600">{t("landing.tagline")}</p>
           </div>
           <div className="absolute right-6 bottom-2 h-20 w-28 rounded-3xl bg-white/70 shadow-inner ring-1 ring-black/5" />
@@ -65,7 +65,7 @@ export default function GrammarPage() {
                 activeLevel === level ? "bg-primary text-white shadow-md" : "bg-white text-gray-700"
               }`}
             >
-              {level === "all" ? "All" : level}
+              {level === "all" ? t("learn.all") : level}
             </button>
           ))}
         </div>
@@ -137,7 +137,7 @@ export default function GrammarPage() {
                     value={value}
                     onChange={(e) => handleAnswerChange(id, e.target.value)}
                     className="w-full rounded-lg border border-neutralLight px-3 py-2 text-sm outline-none focus:border-primary"
-                    placeholder="..."
+                    placeholder={t("grammar.answerPlaceholder")}
                   />
                   {value ? (
                     <p className={`mt-1 text-xs ${correct ? "text-success" : "text-error"}`}>

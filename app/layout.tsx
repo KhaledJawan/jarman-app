@@ -31,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fa">
+    <html lang="fa" dir="rtl">
       <body className={`${geistSans.variable} ${geistMono.variable} text-foreground antialiased`}>
         <LanguageProvider>
           <AppFrameClient>{children}</AppFrameClient>

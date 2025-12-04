@@ -8,7 +8,10 @@
     "example": "Hallo, wie geht's?",
     "audio": "/audio/words/hallo.mp3",
     "image": "/images/words/hallo.png",
-    "category": "basics"
+    "topics": [
+      "Begrüßung & Höflichkeit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0002",
@@ -19,7 +22,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0003",
@@ -30,7 +35,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Begrüßung & Höflichkeit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0004",
@@ -41,7 +49,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0005",
@@ -52,7 +62,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0006",
@@ -63,7 +76,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0007",
@@ -74,7 +89,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0008",
@@ -85,9 +102,13 @@
     "example": "Guten Morgen, Frau Müller!",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "die",
-    "plural": "Frauen"
+    "plural": "Frauen",
+    "topics": [
+      "Begrüßung & Höflichkeit",
+      "Familie & Freunde",
+      "Zahlen, Uhrzeit & Datum"
+    ]
   },
   {
     "id": "wA1-1-0009",
@@ -98,7 +119,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0010",
@@ -109,7 +132,10 @@
     "example": "Ich heiße Khaled.",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0011",
@@ -120,8 +146,11 @@
     "example": "Guten Tag, Herr Jones!",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Begrüßung & Höflichkeit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0012",
@@ -132,7 +161,10 @@
     "example": "Ich komme aus Deutschland.",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0013",
@@ -143,7 +175,10 @@
     "example": "Ich lerne Deutsch.",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Schule, Kurs & Lernen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0014",
@@ -154,9 +189,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "der",
-    "plural": "Namen"
+    "plural": "Namen",
+    "topics": [
+      "Persönliche Daten & Vorstellen"
+    ]
   },
   {
     "id": "wA1-1-0015",
@@ -167,7 +204,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0016",
@@ -178,8 +217,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0017",
@@ -190,7 +232,9 @@
     "example": "Ich bin müde.",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0018",
@@ -201,7 +245,9 @@
     "example": "Ich spreche Deutsch.",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0019",
@@ -212,7 +258,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0020",
@@ -223,7 +271,10 @@
     "example": "Ich wohne in Trier.",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0021",
@@ -234,7 +285,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0022",
@@ -245,7 +298,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Kommunikation & Reaktion",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0023",
@@ -256,7 +312,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0024",
@@ -267,7 +325,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0025",
@@ -278,7 +339,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Begrüßung & Höflichkeit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0026",
@@ -289,7 +353,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Begrüßung & Höflichkeit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0027",
@@ -300,7 +367,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Begrüßung & Höflichkeit"
+    ]
   },
   {
     "id": "wA1-1-0028",
@@ -311,7 +380,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0029",
@@ -322,7 +393,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Begrüßung & Höflichkeit"
+    ]
   },
   {
     "id": "wA1-1-0030",
@@ -333,7 +406,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0031",
@@ -344,7 +420,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0032",
@@ -355,7 +433,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0033",
@@ -366,7 +446,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Begrüßung & Höflichkeit",
+      "Persönliche Daten & Vorstellen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0034",
@@ -377,7 +461,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0035",
@@ -388,7 +474,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0036",
@@ -399,7 +487,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Begrüßung & Höflichkeit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0037",
@@ -410,7 +501,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Kommunikation & Reaktion"
+    ]
   },
   {
     "id": "wA1-1-0038",
@@ -421,9 +514,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "das",
-    "plural": "Länder"
+    "plural": "Länder",
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0039",
@@ -434,9 +530,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "der",
-    "plural": "Nachnamen"
+    "plural": "Nachnamen",
+    "topics": [
+      "Persönliche Daten & Vorstellen"
+    ]
   },
   {
     "id": "wA1-1-0040",
@@ -447,9 +545,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "die",
-    "plural": "Sprachen"
+    "plural": "Sprachen",
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0041",
@@ -460,9 +561,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "der",
-    "plural": "Vornamen"
+    "plural": "Vornamen",
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0042",
@@ -473,8 +577,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Kommunikation & Reaktion",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0043",
@@ -485,7 +593,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Begrüßung & Höflichkeit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0044",
@@ -496,7 +607,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Begrüßung & Höflichkeit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0045",
@@ -507,7 +621,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Schule, Kurs & Lernen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0046",
@@ -518,7 +635,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0047",
@@ -529,8 +648,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Schule, Kurs & Lernen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0048",
@@ -541,8 +664,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "das"
+    "article": "das",
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0049",
@@ -553,7 +679,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0050",
@@ -564,9 +692,13 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "der",
-    "plural": "Familiennamen"
+    "plural": "Familiennamen",
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Familie & Freunde",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0051",
@@ -577,8 +709,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Zahlen, Uhrzeit & Datum",
+      "Wohnen & Haushalt",
+      "Kommunikation & Reaktion"
+    ]
   },
   {
     "id": "wA1-1-0052",
@@ -589,9 +725,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "das",
-    "plural": "Jahre"
+    "plural": "Jahre",
+    "topics": [
+      "Zahlen, Uhrzeit & Datum",
+      "Kommunikation & Reaktion"
+    ]
   },
   {
     "id": "wA1-1-0053",
@@ -602,7 +741,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0054",
@@ -613,7 +754,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0055",
@@ -624,8 +767,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Stadt & Orientierung",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0056",
@@ -636,8 +782,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Stadt & Orientierung",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0057",
@@ -648,8 +798,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Stadt & Orientierung",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0058",
@@ -660,8 +814,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Zahlen, Uhrzeit & Datum",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0059",
@@ -672,8 +829,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Familie & Freunde",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0060",
@@ -684,7 +845,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Zahlen, Uhrzeit & Datum",
+      "Kommunikation & Reaktion"
+    ]
   },
   {
     "id": "wA1-1-0061",
@@ -695,7 +860,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0062",
@@ -706,7 +873,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Begrüßung & Höflichkeit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0063",
@@ -717,7 +887,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Schule, Kurs & Lernen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0064",
@@ -728,7 +901,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Begrüßung & Höflichkeit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0065",
@@ -739,9 +915,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "das",
-    "plural": "Bücher"
+    "plural": "Bücher",
+    "topics": [
+      "Hobbys & Freizeit",
+      "Kommunikation & Reaktion"
+    ]
   },
   {
     "id": "wA1-1-0066",
@@ -752,9 +931,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "der",
-    "plural": "Computer"
+    "plural": "Computer",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0067",
@@ -765,9 +946,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "der",
-    "plural": "Dialoge"
+    "plural": "Dialoge",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0068",
@@ -778,9 +961,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "das",
-    "plural": "Handys"
+    "plural": "Handys",
+    "topics": [
+      "Körper & Gesundheit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0069",
@@ -791,7 +977,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0070",
@@ -802,9 +990,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "der",
-    "plural": "Kurse"
+    "plural": "Kurse",
+    "topics": [
+      "Schule, Kurs & Lernen"
+    ]
   },
   {
     "id": "wA1-1-0071",
@@ -815,9 +1005,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "der",
-    "plural": "Kursleiter"
+    "plural": "Kursleiter",
+    "topics": [
+      "Schule, Kurs & Lernen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0072",
@@ -828,9 +1021,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "die",
-    "plural": "Kursleiterinnen"
+    "plural": "Kursleiterinnen",
+    "topics": [
+      "Schule, Kurs & Lernen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0073",
@@ -841,7 +1037,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Hobbys & Freizeit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0074",
@@ -852,7 +1051,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Persönliche Daten & Vorstellen"
+    ]
   },
   {
     "id": "wA1-1-0075",
@@ -863,7 +1064,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0076",
@@ -874,9 +1077,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "der",
-    "plural": "Texte"
+    "plural": "Texte",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0077",
@@ -887,7 +1092,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0078",
@@ -898,7 +1105,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Essen & Trinken",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0079",
@@ -909,9 +1119,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "das",
-    "plural": "Wörter"
+    "plural": "Wörter",
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0080",
@@ -922,9 +1135,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "die",
-    "plural": "Fragen"
+    "plural": "Fragen",
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0081",
@@ -935,9 +1151,13 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "die",
-    "plural": "Antworten"
+    "plural": "Antworten",
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Körper & Gesundheit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0082",
@@ -948,7 +1168,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Persönliche Daten & Vorstellen"
+    ]
   },
   {
     "id": "wA1-1-0083",
@@ -959,7 +1181,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Körper & Gesundheit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0084",
@@ -970,7 +1196,10 @@
     "example": "Öffnen Sie bitte das Buch.",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Begrüßung & Höflichkeit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0085",
@@ -981,7 +1210,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0086",
@@ -992,7 +1223,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Kommunikation & Reaktion",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0087",
@@ -1003,7 +1237,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Kommunikation & Reaktion",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0088",
@@ -1014,7 +1251,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Schule, Kurs & Lernen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0089",
@@ -1025,7 +1265,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Schule, Kurs & Lernen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0090",
@@ -1036,7 +1279,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0091",
@@ -1047,7 +1292,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Begrüßung & Höflichkeit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0092",
@@ -1058,7 +1306,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Kommunikation & Reaktion",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0093",
@@ -1069,7 +1320,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Begrüßung & Höflichkeit",
+      "Wohnen & Haushalt",
+      "Schule, Kurs & Lernen"
+    ]
   },
   {
     "id": "wA1-1-0094",
@@ -1080,9 +1335,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "das",
-    "plural": "Fenster"
+    "plural": "Fenster",
+    "topics": [
+      "Wohnen & Haushalt",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0095",
@@ -1093,7 +1351,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0096",
@@ -1104,9 +1364,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "die",
-    "plural": "Flaschen"
+    "plural": "Flaschen",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0097",
@@ -1117,9 +1379,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "das",
-    "plural": "Hefte"
+    "plural": "Hefte",
+    "topics": [
+      "Kommunikation & Reaktion",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0098",
@@ -1130,8 +1395,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "das"
+    "article": "das",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0099",
@@ -1142,9 +1409,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "der",
-    "plural": "Kulis"
+    "plural": "Kulis",
+    "topics": [
+      "Arbeit & Beruf (einfach)",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0100",
@@ -1155,9 +1425,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "der",
-    "plural": "Kursräume"
+    "plural": "Kursräume",
+    "topics": [
+      "Wohnen & Haushalt",
+      "Schule, Kurs & Lernen"
+    ]
   },
   {
     "id": "wA1-1-0101",
@@ -1168,9 +1441,13 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "der",
-    "plural": "Kursteilnehmer"
+    "plural": "Kursteilnehmer",
+    "topics": [
+      "Schule, Kurs & Lernen",
+      "Arbeit & Beruf (einfach)",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0102",
@@ -1181,9 +1458,13 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "die",
-    "plural": "Kursteilnehmerinnen"
+    "plural": "Kursteilnehmerinnen",
+    "topics": [
+      "Schule, Kurs & Lernen",
+      "Arbeit & Beruf (einfach)",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0103",
@@ -1194,9 +1475,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "die",
-    "plural": "Lampen"
+    "plural": "Lampen",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0104",
@@ -1207,9 +1490,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "der",
-    "plural": "Laptops"
+    "plural": "Laptops",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0105",
@@ -1220,9 +1505,13 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "der",
-    "plural": "Lehrer"
+    "plural": "Lehrer",
+    "topics": [
+      "Essen & Trinken",
+      "Schule, Kurs & Lernen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0106",
@@ -1233,9 +1522,13 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "die",
-    "plural": "Lehrerinnen"
+    "plural": "Lehrerinnen",
+    "topics": [
+      "Essen & Trinken",
+      "Schule, Kurs & Lernen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0107",
@@ -1246,9 +1539,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "die",
-    "plural": "Sprachschulen"
+    "plural": "Sprachschulen",
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Schule, Kurs & Lernen"
+    ]
   },
   {
     "id": "wA1-1-0108",
@@ -1259,9 +1555,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "der",
-    "plural": "Stifte"
+    "plural": "Stifte",
+    "topics": [
+      "Arbeit & Beruf (einfach)",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0109",
@@ -1272,9 +1571,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "der",
-    "plural": "Stühle"
+    "plural": "Stühle",
+    "topics": [
+      "Wohnen & Haushalt",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0110",
@@ -1285,7 +1587,11 @@
     "example": "Es ist super, oder?",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Essen & Trinken",
+      "Kommunikation & Reaktion",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0111",
@@ -1296,9 +1602,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "das",
-    "plural": "Tablets"
+    "plural": "Tablets",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0112",
@@ -1309,9 +1617,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "die",
-    "plural": "Tafeln"
+    "plural": "Tafeln",
+    "topics": [
+      "Schule, Kurs & Lernen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0113",
@@ -1322,9 +1633,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "die",
-    "plural": "Tassen"
+    "plural": "Tassen",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0114",
@@ -1335,9 +1648,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "der",
-    "plural": "Tische"
+    "plural": "Tische",
+    "topics": [
+      "Wohnen & Haushalt",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0115",
@@ -1348,9 +1664,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "die",
-    "plural": "Türen"
+    "plural": "Türen",
+    "topics": [
+      "Wohnen & Haushalt",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0116",
@@ -1361,9 +1680,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "das",
-    "plural": "Vokabelhefte"
+    "plural": "Vokabelhefte",
+    "topics": [
+      "Kommunikation & Reaktion",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0117",
@@ -1374,9 +1696,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "das",
-    "plural": "Whiteboards"
+    "plural": "Whiteboards",
+    "topics": [
+      "Begrüßung & Höflichkeit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0118",
@@ -1387,7 +1712,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0119",
@@ -1398,7 +1725,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0120",
@@ -1409,7 +1738,10 @@
     "example": "Es gibt Getränke und Snacks in meiner Sprachschule.",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Schule, Kurs & Lernen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0121",
@@ -1420,7 +1752,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Zahlen, Uhrzeit & Datum",
+      "Schule, Kurs & Lernen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0122",
@@ -1431,7 +1767,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Begrüßung & Höflichkeit",
+      "Schule, Kurs & Lernen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0123",
@@ -1442,9 +1782,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "die",
-    "plural": "Apps"
+    "plural": "Apps",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0124",
@@ -1455,9 +1797,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "der",
-    "plural": "Artikel"
+    "plural": "Artikel",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0125",
@@ -1468,9 +1812,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "das",
-    "plural": "Beispiele"
+    "plural": "Beispiele",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0126",
@@ -1481,9 +1827,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "der",
-    "plural": "Fehler"
+    "plural": "Fehler",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0127",
@@ -1494,8 +1842,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0128",
@@ -1506,7 +1856,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0129",
@@ -1517,9 +1869,13 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "die",
-    "plural": "Karteikarten"
+    "plural": "Karteikarten",
+    "topics": [
+      "Einkaufen & Geld",
+      "Stadt & Orientierung",
+      "Reisen & Verkehr"
+    ]
   },
   {
     "id": "wA1-1-0130",
@@ -1530,9 +1886,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "der",
-    "plural": "Lernpartner"
+    "plural": "Lernpartner",
+    "topics": [
+      "Schule, Kurs & Lernen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0131",
@@ -1543,9 +1902,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "die",
-    "plural": "Lernpartnerinnen"
+    "plural": "Lernpartnerinnen",
+    "topics": [
+      "Schule, Kurs & Lernen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0132",
@@ -1556,9 +1918,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "das",
-    "plural": "Probleme"
+    "plural": "Probleme",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0133",
@@ -1569,9 +1933,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "die",
-    "plural": "Regeln"
+    "plural": "Regeln",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0134",
@@ -1582,9 +1948,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "der",
-    "plural": "Sätze"
+    "plural": "Sätze",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0135",
@@ -1595,9 +1963,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "der",
-    "plural": "Tipps"
+    "plural": "Tipps",
+    "topics": [
+      "Begrüßung & Höflichkeit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0136",
@@ -1608,9 +1979,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "das",
-    "plural": "Verben"
+    "plural": "Verben",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0137",
@@ -1621,8 +1994,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0138",
@@ -1633,7 +2009,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0139",
@@ -1644,7 +2022,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0140",
@@ -1655,7 +2035,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0141",
@@ -1666,7 +2048,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Wohnen & Haushalt",
+      "Schule, Kurs & Lernen",
+      "Arbeit & Beruf (einfach)"
+    ]
   },
   {
     "id": "wA1-1-0142",
@@ -1677,7 +2063,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Begrüßung & Höflichkeit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0143",
@@ -1688,7 +2077,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0144",
@@ -1699,7 +2090,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Begrüßung & Höflichkeit",
+      "Reisen & Verkehr",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0145",
@@ -1710,7 +2105,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Zahlen, Uhrzeit & Datum",
+      "Hobbys & Freizeit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0146",
@@ -1721,9 +2120,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "der",
-    "plural": "Freunde"
+    "plural": "Freunde",
+    "topics": [
+      "Familie & Freunde",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0147",
@@ -1734,9 +2136,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "die",
-    "plural": "Freundinnen"
+    "plural": "Freundinnen",
+    "topics": [
+      "Familie & Freunde",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0148",
@@ -1747,7 +2152,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Körper & Gesundheit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0149",
@@ -1758,7 +2166,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Zahlen, Uhrzeit & Datum",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0150",
@@ -1769,9 +2180,13 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "das",
-    "plural": "Hobbys"
+    "plural": "Hobbys",
+    "topics": [
+      "Körper & Gesundheit",
+      "Hobbys & Freizeit",
+      "Wetter & Jahreszeiten"
+    ]
   },
   {
     "id": "wA1-1-0151",
@@ -1782,7 +2197,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0152",
@@ -1793,8 +2210,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0153",
@@ -1805,7 +2224,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Zahlen, Uhrzeit & Datum",
+      "Alltag & Routinen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0154",
@@ -1816,8 +2239,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Hobbys & Freizeit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0155",
@@ -1828,7 +2254,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0156",
@@ -1839,7 +2267,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Alltag & Routinen"
+    ]
   },
   {
     "id": "wA1-1-0157",
@@ -1850,9 +2280,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "das",
-    "plural": "Radios"
+    "plural": "Radios",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0158",
@@ -1863,7 +2295,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0159",
@@ -1874,7 +2308,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0160",
@@ -1885,7 +2321,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0161",
@@ -1896,8 +2334,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Hobbys & Freizeit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0162",
@@ -1908,7 +2350,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0163",
@@ -1919,7 +2363,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0164",
@@ -1930,7 +2376,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0165",
@@ -1941,7 +2389,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0166",
@@ -1952,7 +2402,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0167",
@@ -1963,7 +2415,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Stadt & Orientierung",
+      "Alltag & Routinen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0168",
@@ -1974,7 +2430,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0169",
@@ -1985,7 +2443,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Familie & Freunde",
+      "Hobbys & Freizeit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0170",
@@ -1996,7 +2458,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Hobbys & Freizeit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0171",
@@ -2007,7 +2472,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0172",
@@ -2018,7 +2485,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Essen & Trinken",
+      "Körper & Gesundheit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0173",
@@ -2029,7 +2500,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Reisen & Verkehr",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0174",
@@ -2040,7 +2514,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Hobbys & Freizeit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0175",
@@ -2051,7 +2529,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Familie & Freunde",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0176",
@@ -2062,9 +2543,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "der",
-    "plural": "Abende"
+    "plural": "Abende",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0177",
@@ -2075,8 +2558,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "das"
+    "article": "das",
+    "topics": [
+      "Essen & Trinken",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0178",
@@ -2087,7 +2573,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0179",
@@ -2098,8 +2586,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Arbeit & Beruf (einfach)",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0180",
@@ -2110,7 +2601,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Arbeit & Beruf (einfach)",
+      "Alltag & Routinen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0181",
@@ -2121,7 +2616,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0182",
@@ -2132,7 +2629,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0183",
@@ -2143,7 +2642,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0184",
@@ -2154,7 +2655,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0185",
@@ -2165,7 +2668,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0186",
@@ -2176,7 +2681,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Essen & Trinken",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0187",
@@ -2187,7 +2695,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Essen & Trinken",
+      "Alltag & Routinen",
+      "Kommunikation & Reaktion"
+    ]
   },
   {
     "id": "wA1-1-0188",
@@ -2198,9 +2710,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "die",
-    "plural": "Universitäten"
+    "plural": "Universitäten",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0189",
@@ -2211,7 +2725,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Begrüßung & Höflichkeit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0190",
@@ -2222,7 +2739,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Essen & Trinken",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0191",
@@ -2233,7 +2753,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0192",
@@ -2244,7 +2766,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Zahlen, Uhrzeit & Datum",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0193",
@@ -2255,7 +2780,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0194",
@@ -2266,7 +2793,9 @@
     "example": "Ich gehe am Wochenende gern aus.",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0195",
@@ -2277,8 +2806,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "das"
+    "article": "das",
+    "topics": [
+      "Einkaufen & Geld",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0196",
@@ -2289,9 +2821,13 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "das",
-    "plural": "Kinder"
+    "plural": "Kinder",
+    "topics": [
+      "Begrüßung & Höflichkeit",
+      "Familie & Freunde",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0197",
@@ -2302,7 +2838,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0198",
@@ -2313,9 +2851,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "der",
-    "plural": "Menschen"
+    "plural": "Menschen",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0199",
@@ -2326,7 +2866,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0200",
@@ -2337,9 +2879,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "die",
-    "plural": "Stunden"
+    "plural": "Stunden",
+    "topics": [
+      "Zahlen, Uhrzeit & Datum",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0201",
@@ -2350,7 +2895,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0202",
@@ -2361,9 +2909,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "die",
-    "plural": "Wochen"
+    "plural": "Wochen",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0203",
@@ -2374,9 +2924,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "das",
-    "plural": "Wochenenden"
+    "plural": "Wochenenden",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0204",
@@ -2387,8 +2939,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Zahlen, Uhrzeit & Datum",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0205",
@@ -2399,7 +2954,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0206",
@@ -2410,7 +2967,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Zahlen, Uhrzeit & Datum",
+      "Hobbys & Freizeit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0207",
@@ -2421,7 +2982,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0208",
@@ -2432,7 +2995,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0209",
@@ -2443,8 +3008,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Kommunikation & Reaktion",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0210",
@@ -2455,7 +3023,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Begrüßung & Höflichkeit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0211",
@@ -2466,8 +3037,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Zahlen, Uhrzeit & Datum",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0212",
@@ -2478,8 +3052,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "das"
+    "article": "das",
+    "topics": [
+      "Essen & Trinken",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0213",
@@ -2490,7 +3067,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0214",
@@ -2501,8 +3080,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "das"
+    "article": "das",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0215",
@@ -2513,9 +3094,13 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "das",
-    "plural": "Getränke"
+    "plural": "Getränke",
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Essen & Trinken",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0216",
@@ -2526,9 +3111,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "das",
-    "plural": "Gläser"
+    "plural": "Gläser",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0217",
@@ -2539,8 +3126,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0218",
@@ -2551,8 +3140,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Essen & Trinken"
+    ]
   },
   {
     "id": "wA1-1-0219",
@@ -2563,9 +3154,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "die",
-    "plural": "Kartoffeln"
+    "plural": "Kartoffeln",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0220",
@@ -2576,7 +3169,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Alltag & Routinen",
+      "Kommunikation & Reaktion",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0221",
@@ -2587,7 +3184,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0222",
@@ -2598,7 +3197,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Familie & Freunde",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0223",
@@ -2609,9 +3211,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "die",
-    "plural": "Möhren"
+    "plural": "Möhren",
+    "topics": [
+      "Reisen & Verkehr"
+    ]
   },
   {
     "id": "wA1-1-0224",
@@ -2622,7 +3226,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Kommunikation & Reaktion",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0225",
@@ -2633,7 +3240,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Arbeit & Beruf (einfach)",
+      "Kommunikation & Reaktion",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0226",
@@ -2644,8 +3255,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "das"
+    "article": "das",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0227",
@@ -2656,8 +3269,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Körper & Gesundheit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0228",
@@ -2668,9 +3284,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "die",
-    "plural": "Pfannen"
+    "plural": "Pfannen",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0229",
@@ -2681,8 +3299,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0230",
@@ -2693,9 +3313,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "der",
-    "plural": "Pilze"
+    "plural": "Pilze",
+    "topics": [
+      "Wohnen & Haushalt",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0231",
@@ -2706,9 +3329,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "die",
-    "plural": "Pizzas/Pizzen"
+    "plural": "Pizzas/Pizzen",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0232",
@@ -2719,8 +3344,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0233",
@@ -2731,9 +3358,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "der",
-    "plural": "Säfte"
+    "plural": "Säfte",
+    "topics": [
+      "Essen & Trinken",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0234",
@@ -2744,9 +3374,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "der",
-    "plural": "Salate"
+    "plural": "Salate",
+    "topics": [
+      "Zahlen, Uhrzeit & Datum"
+    ]
   },
   {
     "id": "wA1-1-0235",
@@ -2757,8 +3389,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "das"
+    "article": "das",
+    "topics": [
+      "Essen & Trinken"
+    ]
   },
   {
     "id": "wA1-1-0236",
@@ -2769,7 +3403,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0237",
@@ -2780,7 +3416,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0238",
@@ -2791,9 +3429,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "die",
-    "plural": "Soßen"
+    "plural": "Soßen",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0239",
@@ -2804,9 +3444,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "die",
-    "plural": "Suppen"
+    "plural": "Suppen",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0240",
@@ -2817,7 +3459,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0241",
@@ -2828,8 +3472,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Essen & Trinken"
+    ]
   },
   {
     "id": "wA1-1-0242",
@@ -2840,9 +3486,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "die",
-    "plural": "Tomaten"
+    "plural": "Tomaten",
+    "topics": [
+      "Familie & Freunde"
+    ]
   },
   {
     "id": "wA1-1-0243",
@@ -2853,7 +3501,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Essen & Trinken",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0244",
@@ -2864,8 +3515,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "das"
+    "article": "das",
+    "topics": [
+      "Essen & Trinken",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0245",
@@ -2876,9 +3530,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "die",
-    "plural": "Zwiebeln"
+    "plural": "Zwiebeln",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0246",
@@ -2889,7 +3545,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Zahlen, Uhrzeit & Datum",
+      "Körper & Gesundheit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0247",
@@ -2900,7 +3560,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Zahlen, Uhrzeit & Datum",
+      "Körper & Gesundheit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0248",
@@ -2911,9 +3575,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "das",
-    "plural": "Eier"
+    "plural": "Eier",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0249",
@@ -2924,9 +3590,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "der",
-    "plural": "Einkäufe"
+    "plural": "Einkäufe",
+    "topics": [
+      "Einkaufen & Geld",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0250",
@@ -2937,9 +3606,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "die",
-    "plural": "Einladungen"
+    "plural": "Einladungen",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0251",
@@ -2950,9 +3621,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "der",
-    "plural": "Joghurts"
+    "plural": "Joghurts",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0252",
@@ -2963,8 +3636,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Essen & Trinken",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0253",
@@ -2975,7 +3651,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Zahlen, Uhrzeit & Datum",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0254",
@@ -2986,9 +3665,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "die",
-    "plural": "Torten"
+    "plural": "Torten",
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0255",
@@ -2999,7 +3681,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0256",
@@ -3010,9 +3694,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "der",
-    "plural": "Weine"
+    "plural": "Weine",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0257",
@@ -3023,8 +3709,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Essen & Trinken",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0258",
@@ -3035,7 +3724,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0259",
@@ -3046,7 +3737,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0260",
@@ -3057,7 +3750,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0261",
@@ -3068,7 +3763,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Familie & Freunde",
+      "Kommunikation & Reaktion",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0262",
@@ -3079,9 +3778,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "der",
-    "plural": "Äpfel"
+    "plural": "Äpfel",
+    "topics": [
+      "Essen & Trinken"
+    ]
   },
   {
     "id": "wA1-1-0263",
@@ -3092,9 +3793,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "die",
-    "plural": "Bananen"
+    "plural": "Bananen",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0264",
@@ -3105,7 +3808,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0265",
@@ -3116,9 +3821,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "das",
-    "plural": "Brote"
+    "plural": "Brote",
+    "topics": [
+      "Essen & Trinken"
+    ]
   },
   {
     "id": "wA1-1-0266",
@@ -3129,8 +3836,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0267",
@@ -3141,9 +3850,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "die",
-    "plural": "Gurken"
+    "plural": "Gurken",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0268",
@@ -3154,8 +3865,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0269",
@@ -3166,7 +3879,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Einkaufen & Geld",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0270",
@@ -3177,7 +3893,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Einkaufen & Geld"
+    ]
   },
   {
     "id": "wA1-1-0271",
@@ -3188,9 +3906,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "das",
-    "plural": "Lebensmittel"
+    "plural": "Lebensmittel",
+    "topics": [
+      "Essen & Trinken",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0272",
@@ -3201,8 +3922,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "das"
+    "article": "das",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0273",
@@ -3213,8 +3936,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "das"
+    "article": "das",
+    "topics": [
+      "Essen & Trinken",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0274",
@@ -3225,7 +3951,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Kommunikation & Reaktion",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0275",
@@ -3236,9 +3965,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "die",
-    "plural": "Orangen"
+    "plural": "Orangen",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0276",
@@ -3249,9 +3980,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "die",
-    "plural": "Packungen"
+    "plural": "Packungen",
+    "topics": [
+      "Persönliche Daten & Vorstellen"
+    ]
   },
   {
     "id": "wA1-1-0277",
@@ -3262,9 +3995,13 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
     "article": "der",
-    "plural": "Supermärkte"
+    "plural": "Supermärkte",
+    "topics": [
+      "Einkaufen & Geld",
+      "Kommunikation & Reaktion",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0278",
@@ -3275,8 +4012,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "das"
+    "article": "das",
+    "topics": [
+      "Reisen & Verkehr",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0279",
@@ -3287,8 +4027,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Reisen & Verkehr",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0280",
@@ -3299,8 +4042,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "das"
+    "article": "das",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0281",
@@ -3311,8 +4056,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Reisen & Verkehr",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0282",
@@ -3323,8 +4071,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "das"
+    "article": "das",
+    "topics": [
+      "Hobbys & Freizeit",
+      "Kommunikation & Reaktion",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0283",
@@ -3335,7 +4087,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0284",
@@ -3346,8 +4100,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Zahlen, Uhrzeit & Datum",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0285",
@@ -3358,7 +4115,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Zahlen, Uhrzeit & Datum",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0286",
@@ -3369,7 +4129,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0287",
@@ -3380,7 +4142,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0288",
@@ -3391,8 +4155,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "das"
+    "article": "das",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0289",
@@ -3403,8 +4169,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0290",
@@ -3415,8 +4183,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Reisen & Verkehr",
+      "Wetter & Jahreszeiten",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0291",
@@ -3427,8 +4199,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Stadt & Orientierung",
+      "Reisen & Verkehr"
+    ]
   },
   {
     "id": "wA1-1-0292",
@@ -3439,7 +4215,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0293",
@@ -3450,8 +4228,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "das"
+    "article": "das",
+    "topics": [
+      "Reisen & Verkehr",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0294",
@@ -3462,8 +4243,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Stadt & Orientierung",
+      "Reisen & Verkehr",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0295",
@@ -3474,8 +4259,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "das"
+    "article": "das",
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Hobbys & Freizeit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0296",
@@ -3486,8 +4275,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Stadt & Orientierung",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0297",
@@ -3498,8 +4290,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Reisen & Verkehr",
+      "Wetter & Jahreszeiten",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0298",
@@ -3510,8 +4306,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0299",
@@ -3522,8 +4320,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0300",
@@ -3534,7 +4334,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0301",
@@ -3545,7 +4347,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0302",
@@ -3556,8 +4360,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0303",
@@ -3568,7 +4374,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0304",
@@ -3579,8 +4387,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Stadt & Orientierung",
+      "Reisen & Verkehr",
+      "Wetter & Jahreszeiten"
+    ]
   },
   {
     "id": "wA1-1-0305",
@@ -3591,8 +4403,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "das"
+    "article": "das",
+    "topics": [
+      "Essen & Trinken"
+    ]
   },
   {
     "id": "wA1-1-0306",
@@ -3603,7 +4417,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0307",
@@ -3614,8 +4431,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Wohnen & Haushalt",
+      "Kommunikation & Reaktion",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0308",
@@ -3626,8 +4447,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Zahlen, Uhrzeit & Datum",
+      "Stadt & Orientierung"
+    ]
   },
   {
     "id": "wA1-1-0309",
@@ -3638,8 +4463,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Wohnen & Haushalt",
+      "Kommunikation & Reaktion",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0310",
@@ -3650,7 +4479,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Stadt & Orientierung",
+      "Körper & Gesundheit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0311",
@@ -3661,8 +4494,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Stadt & Orientierung",
+      "Reisen & Verkehr",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0312",
@@ -3673,8 +4510,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0313",
@@ -3685,8 +4524,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0314",
@@ -3697,8 +4538,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "das"
+    "article": "das",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0315",
@@ -3709,8 +4552,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Stadt & Orientierung",
+      "Körper & Gesundheit"
+    ]
   },
   {
     "id": "wA1-1-0316",
@@ -3721,8 +4567,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0317",
@@ -3733,8 +4581,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Stadt & Orientierung",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0318",
@@ -3745,7 +4597,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Reisen & Verkehr"
+    ]
   },
   {
     "id": "wA1-1-0319",
@@ -3756,7 +4610,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0320",
@@ -3767,8 +4623,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0321",
@@ -3779,8 +4637,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0322",
@@ -3791,7 +4651,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Stadt & Orientierung",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0323",
@@ -3802,7 +4665,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Stadt & Orientierung",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0324",
@@ -3813,7 +4679,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Begrüßung & Höflichkeit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0325",
@@ -3824,7 +4693,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Kommunikation & Reaktion",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0326",
@@ -3835,7 +4707,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Kommunikation & Reaktion",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0327",
@@ -3846,7 +4721,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Hobbys & Freizeit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0328",
@@ -3857,8 +4735,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Wohnen & Haushalt",
+      "Kommunikation & Reaktion",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0329",
@@ -3869,8 +4751,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Reisen & Verkehr",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0330",
@@ -3881,7 +4766,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Stadt & Orientierung",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0331",
@@ -3892,8 +4780,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "das"
+    "article": "das",
+    "topics": [
+      "Reisen & Verkehr",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0332",
@@ -3904,7 +4795,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0333",
@@ -3915,7 +4808,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Zahlen, Uhrzeit & Datum",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0334",
@@ -3926,8 +4822,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0335",
@@ -3938,8 +4836,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0336",
@@ -3950,8 +4850,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Begrüßung & Höflichkeit",
+      "Familie & Freunde",
+      "Einkaufen & Geld"
+    ]
   },
   {
     "id": "wA1-1-0337",
@@ -3962,8 +4866,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0338",
@@ -3974,7 +4880,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Reisen & Verkehr",
+      "Wetter & Jahreszeiten",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0339",
@@ -3985,8 +4895,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "das"
+    "article": "das",
+    "topics": [
+      "Zahlen, Uhrzeit & Datum",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0340",
@@ -3997,7 +4910,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0341",
@@ -4008,7 +4923,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Kommunikation & Reaktion",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0342",
@@ -4019,8 +4937,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Reisen & Verkehr",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0343",
@@ -4031,8 +4952,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "das"
+    "article": "das",
+    "topics": [
+      "Wohnen & Haushalt",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0344",
@@ -4043,8 +4967,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "das"
+    "article": "das",
+    "topics": [
+      "Wohnen & Haushalt",
+      "Alltag & Routinen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0345",
@@ -4055,8 +4983,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0346",
@@ -4067,8 +4997,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "das"
+    "article": "das",
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0347",
@@ -4079,8 +5012,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "das"
+    "article": "das",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0348",
@@ -4091,8 +5026,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0349",
@@ -4103,8 +5041,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Stadt & Orientierung",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0350",
@@ -4115,8 +5056,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0351",
@@ -4127,8 +5070,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "das"
+    "article": "das",
+    "topics": [
+      "Wohnen & Haushalt",
+      "Kommunikation & Reaktion",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0352",
@@ -4139,8 +5086,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0353",
@@ -4151,7 +5100,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Kommunikation & Reaktion",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0354",
@@ -4162,8 +5115,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Wohnen & Haushalt",
+      "Kommunikation & Reaktion",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0355",
@@ -4174,8 +5131,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Wohnen & Haushalt",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0356",
@@ -4186,8 +5146,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Wohnen & Haushalt",
+      "Stadt & Orientierung"
+    ]
   },
   {
     "id": "wA1-1-0357",
@@ -4198,8 +5161,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0358",
@@ -4210,8 +5175,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "das"
+    "article": "das",
+    "topics": [
+      "Wohnen & Haushalt",
+      "Alltag & Routinen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0359",
@@ -4222,8 +5191,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0360",
@@ -4234,8 +5205,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0361",
@@ -4246,8 +5219,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Wohnen & Haushalt",
+      "Körper & Gesundheit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0362",
@@ -4258,8 +5235,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "das"
+    "article": "das",
+    "topics": [
+      "Wohnen & Haushalt",
+      "Alltag & Routinen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0363",
@@ -4270,8 +5251,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "das"
+    "article": "das",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0364",
@@ -4282,8 +5265,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "das"
+    "article": "das",
+    "topics": [
+      "Wohnen & Haushalt",
+      "Alltag & Routinen",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0365",
@@ -4294,7 +5281,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0366",
@@ -4305,7 +5294,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Kommunikation & Reaktion",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0367",
@@ -4316,7 +5309,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Stadt & Orientierung",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0368",
@@ -4327,7 +5323,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0369",
@@ -4338,7 +5336,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Kommunikation & Reaktion",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0370",
@@ -4349,7 +5350,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Begrüßung & Höflichkeit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0371",
@@ -4360,7 +5364,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0372",
@@ -4371,7 +5377,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Begrüßung & Höflichkeit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0373",
@@ -4382,7 +5391,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0374",
@@ -4393,7 +5404,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0375",
@@ -4404,7 +5417,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Einkaufen & Geld",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0376",
@@ -4415,7 +5431,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Einkaufen & Geld",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0377",
@@ -4426,7 +5445,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Wetter & Jahreszeiten"
+    ]
   },
   {
     "id": "wA1-1-0378",
@@ -4437,7 +5458,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Körper & Gesundheit",
+      "Wetter & Jahreszeiten"
+    ]
   },
   {
     "id": "wA1-1-0379",
@@ -4448,7 +5472,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0380",
@@ -4459,7 +5485,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Wohnen & Haushalt",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0381",
@@ -4470,8 +5500,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0382",
@@ -4482,7 +5514,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0383",
@@ -4493,8 +5527,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Wohnen & Haushalt",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0384",
@@ -4505,8 +5542,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Wohnen & Haushalt",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0385",
@@ -4517,8 +5557,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Wohnen & Haushalt",
+      "Einkaufen & Geld",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0386",
@@ -4529,8 +5573,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Wohnen & Haushalt",
+      "Einkaufen & Geld",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0387",
@@ -4541,8 +5589,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Kommunikation & Reaktion",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0388",
@@ -4553,7 +5604,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Familie & Freunde",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0389",
@@ -4564,8 +5618,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "das"
+    "article": "das",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0390",
@@ -4576,8 +5632,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "das"
+    "article": "das",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0391",
@@ -4588,8 +5646,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Einkaufen & Geld",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0392",
@@ -4600,8 +5661,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Wohnen & Haushalt",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0393",
@@ -4612,8 +5677,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Persönliche Daten & Vorstellen",
+      "Wohnen & Haushalt",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0394",
@@ -4624,8 +5693,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Zahlen, Uhrzeit & Datum",
+      "Wohnen & Haushalt",
+      "Kommunikation & Reaktion"
+    ]
   },
   {
     "id": "wA1-1-0395",
@@ -4636,7 +5709,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0396",
@@ -4647,7 +5722,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0397",
@@ -4658,8 +5735,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Wohnen & Haushalt",
+      "Essen & Trinken",
+      "Wetter & Jahreszeiten"
+    ]
   },
   {
     "id": "wA1-1-0398",
@@ -4670,8 +5751,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Wohnen & Haushalt",
+      "Körper & Gesundheit",
+      "Wetter & Jahreszeiten"
+    ]
   },
   {
     "id": "wA1-1-0399",
@@ -4682,7 +5767,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0400",
@@ -4693,7 +5780,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0401",
@@ -4704,8 +5793,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "das"
+    "article": "das",
+    "topics": [
+      "Wohnen & Haushalt"
+    ]
   },
   {
     "id": "wA1-1-0402",
@@ -4716,8 +5807,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Wohnen & Haushalt",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0403",
@@ -4728,7 +5822,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Wohnen & Haushalt",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0404",
@@ -4739,8 +5836,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0405",
@@ -4751,8 +5850,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "das"
+    "article": "das",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0406",
@@ -4763,8 +5864,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "das"
+    "article": "das",
+    "topics": [
+      "Zahlen, Uhrzeit & Datum",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0407",
@@ -4775,8 +5879,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Wohnen & Haushalt"
+    ]
   },
   {
     "id": "wA1-1-0408",
@@ -4787,8 +5893,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Wohnen & Haushalt",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0409",
@@ -4799,8 +5908,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "das"
+    "article": "das",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0410",
@@ -4811,7 +5922,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Stadt & Orientierung",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0411",
@@ -4822,8 +5936,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Reisen & Verkehr",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0412",
@@ -4834,8 +5951,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0413",
@@ -4846,7 +5965,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0414",
@@ -4857,8 +5978,11 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "der"
+    "article": "der",
+    "topics": [
+      "Reisen & Verkehr",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0415",
@@ -4869,8 +5993,12 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1",
-    "article": "die"
+    "article": "die",
+    "topics": [
+      "Begrüßung & Höflichkeit",
+      "Reisen & Verkehr",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0416",
@@ -4881,7 +6009,10 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Begrüßung & Höflichkeit",
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0417",
@@ -4892,7 +6023,9 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   },
   {
     "id": "wA1-1-0418",
@@ -4903,6 +6036,8 @@
     "example": "",
     "audio": "",
     "image": "",
-    "category": "A1"
+    "topics": [
+      "Grammatik & Funktionswörter"
+    ]
   }
 ]
