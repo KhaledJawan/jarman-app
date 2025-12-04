@@ -67,16 +67,16 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     [currentLanguage],
   );
 
-  const value = useMemo(
-    () => ({
+  const value: LanguageContextValue = useMemo(() => {
+    const direction: "rtl" | "ltr" = currentLanguage === "fa" ? "rtl" : "ltr";
+    return {
       currentLanguage,
       setLanguage,
       t: translate,
-      direction: currentLanguage === "fa" ? "rtl" : "ltr",
-      isRTL: currentLanguage === "fa",
-    }),
-    [currentLanguage, setLanguage, translate],
-  );
+      direction,
+      isRTL: direction === "rtl",
+    };
+  }, [currentLanguage, setLanguage, translate]);
 
   return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
 }
