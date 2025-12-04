@@ -1,6 +1,6 @@
 "use client";
 
-import words from "@/data/word/a11.json";
+import wordsData from "@/data/word/a11.json";
 import { useLanguage } from "@/lib/i18n";
 import { load, save } from "@/lib/storage";
 import { scheduleReview, type Difficulty, getReviewRecords, type ReviewRecord } from "@/lib/srs";
@@ -9,7 +9,9 @@ import { useParams, useSearchParams } from "next/navigation";
 import { Bookmark, BookmarkCheck, Check, ChevronLeft, ChevronRight, Play } from "lucide-react";
 import { useEffect, useMemo, useState, type CSSProperties } from "react";
 
-type Word = (typeof words)[number];
+type Word = Omit<(typeof wordsData)[number], "topics" | "category"> & { topics?: string[]; category?: string };
+
+const words: Word[] = wordsData;
 
 const LEARNED_KEY = "jarman-learned-words";
 const MARKED_KEY = "jarman-marked-words";
@@ -38,7 +40,7 @@ export default function VocabularyFlashcardPage() {
   const filteredWords = useMemo(() => {
     if (!category || category === "all") return words;
     return words.filter((w) => w.category === category);
-  }, [category]);
+  }, [category, words]);
 
   const initialIndex = useMemo(() => {
     const idx = filteredWords.findIndex((w) => w.id === params.id);
