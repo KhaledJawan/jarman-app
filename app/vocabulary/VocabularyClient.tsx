@@ -27,7 +27,7 @@ import {
 import { useEffect, useMemo, useState } from "react";
 import { useVocabularyNav } from "./useVocabularyNav";
 
-type Word = (typeof a11)[number] & { category?: string; topics?: string[] };
+type Word = Omit<(typeof a11)[number], "topics" | "category"> & { category?: string; topics?: string[] };
 const allWords: Word[] = [...a11, ...a12, ...a21, ...a22, ...b11, ...b12, ...b21, ...b22, ...c11, ...c12];
 type WordStatus = "new" | "practice" | "mastered";
 type CustomWord = {
